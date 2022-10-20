@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+}
+
+.header {
+  top: 0;
+  background-color: #f1f1f1;
+  padding: 1px;
+  text-align: center;
+  font-size: small;
+  margin-top: -10px;
+}
+
+/* For menue line below header */
+.topnav {
+  margin-top: -10px;
+  overflow: hidden;
+  background-color: orange;
+}
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+.topnav b {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+/*Three equal columns for doc uploader holder*/
+.column {
+  text-align: center;
+  font-size: medium;
+  background-color: gray;
+  float: left;
+  width: 33.33%;
+}
+.h2margincol {
+  margin-top: 3px;
+}
+/* For upload buttons */
+.columnSub {
+  margin-top: -23px;
+  text-align: left;
+  font-size: small;
+  float: left;
+  width: 100%;
+}
+.h2Fileuploadleft{
+  margin-left: 10px;
+}
+.h2Fileuploadright{
+  margin-left:50px;
+}
+.h2Fileuploadbutton{
+  margin-left:18px;
+  font-size: medium;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Main doc holder */
+#content, html, body {
+  height: 93%;
+}
+#left {
+  margin-top: -20px;
+  float: left;
+  width: 44%;
+  height: 100%;
+  overflow: scroll;
+  text-align: justify;
+  background-color: lightgrey;
+}
+#center {
+  margin-top: -20px;
+  float: left;
+  overflow: scroll;
+  font-size: medium;
+  text-align: center;
+  width: 12%;
+  height: 100%;
+}
+#right {
+  margin-top: -20px;
+  float: right;
+  width: 44%;
+  height: 100%;
+  overflow: scroll;
+  text-align: justify;
+  background-color: lightgrey;
+}
+
+.centerAbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 50%;
+  border: double;
+  border-spacing: inherit;
+}
+
+.footer {
+  bottom: 0;
+  margin-bottom: -10px;
+  background-color: #f1f1f1;
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+}
+
+.middleButton {
+  margin-top: -20px;
+}

@@ -1,0 +1,36 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block leftColumn %}
+
+{% if startRecording %}
+
+	<div id="left" onmouseup='textSelection({{ countRef }})'>
+		{% include susp %}
+	</div>
+{% else %}
+	<div id="left">
+		{% include susp %}
+	</div>
+{% endif %}
+
+
+{% endblock %}
+
+
+{% block rightColumn %}
+
+{% if startRecording %}
+	<div id="right" onmouseup='textSelection({{ countRef }})'>
+		{% include src %}
+	</div>
+{% else %}
+	<div id="right">
+		{% include src %}
+	</div>
+{% endif %}
+
+<script> renderCasesPro() </script>
+<script> renderCases({{ prevRecordings|safe }}) </script>
+
+{% endblock %}

@@ -1,0 +1,866 @@
+xml version="1.0" encoding="utf-8"?
+html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"
+
+
+On the class of weak almost limited operators
+Generated on Mon Aug 22 10:00:42 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.
+
+
+
+
+
+
+
+
+
+
+On the class of weak almost limited operators
+
+
+Aziz Elbour
+
+Université Moulay Ismaïl, Faculté des
+Sciences et Techniques, Département de Mathématiques, B.P. 509,
+Errachidia, Morocco.
+
+azizelbour@hotmail.com
+
+, 
+Nabil Machrafi
+
+Université Ibn Tofail, Faculté des Sciences, Département de Mathématiques, B.P. 133, Kénitra, Morocco.
+
+nmachrafi@gmail.com
+
+ and 
+Mohammed Moussa
+
+Université Ibn Tofail, Faculté des Sciences, Département de Mathématiques, B.P. 133, Kénitra, Morocco.
+
+mohammed.moussa09@gmail.com
+
+Abstract.
+We introduce and study the class of weak almost limited operators. We
+establish a characterization of pairs of Banach lattices [m1], [m2] for which
+every positive weak almost limited operator [m3] is almost
+limited (resp. almost Dunford-Pettis). As consequences, we will give some
+interesting results.
+
+
+Key words and phrases:weak almost limited operator, almost limited operator, almost
+Dunford-Pettis operator, wDP[m4] property, positive dual Schur
+property, almost limited set
+
+2010 Mathematics Subject Classification: Primary 46B42; Secondary 46B50, 47B65
+
+
+1. Introduction
+
+Throughout this paper [S1.p1.m1] [S1.p1.m2] will denote real Banach spaces, and [S1.p1.m3]
+will denote real Banach lattices. [S1.p1.m4] is the closed unit ball of [S1.p1.m5] and [S1.p1.m6] denotes the solid hull of a
+subset [S1.p1.m7] of a Banach lattice. We will use the term operator [S1.p1.m8] between two Banach spaces to mean a bounded linear mapping.
+
+
+Let us recall that a norm bounded subset [S1.p2.m1] of [S1.p2.m2] is called a Dunford-Pettis set (resp.a limited set) if each weakly null sequence
+in [S1.p2.m3] (resp. weak* null sequence in [S1.p2.m4]) converges
+uniformly to zero on [S1.p2.m5]. An operator [S1.p2.m6] is called Dunford-Pettis if [S1.p2.m7] in [S1.p2.m8] implies [S1.p2.m9], equivalently, if [S1.p2.m10] carries
+relatively weakly compact subsets of [S1.p2.m11] onto relatively compact subsets of [S1.p2.m12]. An operator [S1.p2.m13] is said to be limited whenever [S1.p2.m14] is a limited set in [S1.p2.m15], equivalently, whenever [S1.p2.m16] for every
+weak* null sequence [S1.p2.m17].
+
+
+Aliprantis and Burkinshaw [1] introduced the class of weak
+Dunford–Pettis operators. An operator [S1.p3.m1] is said to be
+weak Dunford–Pettis whenever [S1.p3.m2] in [S1.p3.m3]
+and [S1.p3.m4] in [S1.p3.m5] imply [S1.p3.m6], equivalently, whenever [S1.p3.m7] carries weakly
+compact subsets of [S1.p3.m8] to Dunford–Pettis subsets of [S1.p3.m9] [2, Theorem 5.99]. Next H’michane et al. [8] introduced the class of weak*
+Dunford-Pettis operators, and characterized this class of operators and
+studied some of its properties in [9]. An operator [S1.p3.m10]
+is called weak* Dunford-Pettis whenever [S1.p3.m11] in [S1.p3.m12] and [S1.p3.m13] in [S1.p3.m14]
+imply [S1.p3.m15], equivalently, whenever [S1.p3.m16]
+carries relatively weakly compact subsets of [S1.p3.m17] onto limited subsets of [S1.p3.m18]
+[9, Theorem 3.2].
+
+
+Recently, two classes of norm bounded sets are considered in the theory of
+Banach lattices. From [3] (resp. [5]), a norm bounded
+subset [S1.p4.m1] of a Banach lattice [S1.p4.m2] is said to be an almost
+Dunford-Pettis set (resp. an almost limited set), if every disjoint
+weak null (resp. weak* null) sequence [S1.p4.m3] in [S1.p4.m4] converges
+uniformly to zero on [S1.p4.m5]. Clearly, all Dunford-Pettis sets (resp. limited
+sets) in a Banach lattice are almost Dunford-Pettis (resp. almost limited).
+Also, every almost limited set is almost Dunford-Pettis. But the converse
+does not hold in general.
+
+
+Let us recall that an operator [S1.p5.m1] is said to be almost
+Dunford-Pettis, if [S1.p5.m2] carries every disjoint weakly null sequence to a
+norm null sequence, or equivalently, if [S1.p5.m3] carries every disjoint weakly
+null sequence consisting of positive terms to a norm null sequence [12, Remark 1]. From [10], an operator [S1.p5.m4] is called
+almost limited whenever [S1.p5.m5] is an almost limited
+set in [S1.p5.m6], equivalently, whenever [S1.p5.m7] for every disjoint weak* null sequence [S1.p5.m8].
+
+
+Using the almost Dunford-Pettis sets, Bouras and Moussa [4]
+introduced the class of weak almost Dunford-Pettis operators. An operator [S1.p6.m1] is called weak almost Dunford-Pettis operator
+whenever [S1.p6.m2] carries relatively weakly compact subsets of [S1.p6.m3] to almost
+Dunford–Pettis subsets of [S1.p6.m4], equivalently, whenever [S1.p6.m5] for all weakly null sequences [S1.p6.m6] in [S1.p6.m7] and for all
+weakly null sequences [S1.p6.m8] in [S1.p6.m9] consisting of pairwise
+disjoint terms [4, Theorem 2.1].
+
+
+In this paper, using the almost limited sets, we introduce the class of
+weak almost limited operators [S1.p7.m1], which carries
+relatively weakly compact subsets of [S1.p7.m2] to almost limited subsets of [S1.p7.m3]
+(Definition 2.1). It is a class which contains that of weak*
+Dunford-Pettis (resp. almost limited). We establish some characterizations
+of weak almost limited operators. After that, we derive the domination
+property of this class of operators (Corollary 2.6). Next, we
+characterize pairs of Banach lattices [S1.p7.m4], [S1.p7.m5] for which every positive weak
+almost limited operator [S1.p7.m6] is almost limited (resp. almost
+Dunford-Pettis). As consequences, we will give some interesting results.
+
+
+To show our results we need to recall some definitions that will be used in
+this paper. A Banach lattice [S1.p8.m1] has
+
+
+
+-
+
+the Dunford-Pettis property, if [S1.I1.ix1.p1.m1] in [S1.I1.ix1.p1.m2] and [S1.I1.ix1.p1.m3] in [S1.I1.ix1.p1.m4]
+imply [S1.I1.ix1.p1.m5] as [S1.I1.ix1.p1.m6],
+equivalently, each relatively weakly compact subset of [S1.I1.ix1.p1.m7] is
+Dunford–Pettis.
+
+-
+
+the Dunford-Pettis* property (DP* property for short), if [S1.I1.ix2.p1.m1] in [S1.I1.ix2.p1.m2] and [S1.I1.ix2.p1.m3] in [S1.I1.ix2.p1.m4] imply [S1.I1.ix2.p1.m5], equivalently, each relatively weakly compact subset of [S1.I1.ix2.p1.m6] is limited.
+
+-
+
+the weak Dunford-Pettis* property (wDP* property), if [S1.I1.ix3.p1.m1] for every weakly null sequence [S1.I1.ix3.p1.m2] in [S1.I1.ix3.p1.m3] and for every disjoint weak* null sequence [S1.I1.ix3.p1.m4] in [S1.I1.ix3.p1.m5], equivalently, each relatively weakly
+compact subset of [S1.I1.ix3.p1.m6] is almost limited [5, Definition 3.1].
+
+-
+
+the Schur (resp. positive Schur) property, if [S1.I1.ix4.p1.m1] for every weak null sequence [S1.I1.ix4.p1.m2] (resp. [S1.I1.ix4.p1.m3]).
+
+-
+
+the positive dual Schur property, if [S1.I1.ix5.p1.m1] for every weak* null sequence [S1.I1.ix5.p1.m2], equivalently, [S1.I1.ix5.p1.m3] for every weak* null sequence [S1.I1.ix5.p1.m4] consisting of
+pairwise disjoint terms [13, Proposition 2.3].
+
+-
+
+the property (d) whenever [S1.I1.ix6.p1.m1] and [S1.I1.ix6.p1.m2] in [S1.I1.ix6.p1.m3] imply [S1.I1.ix6.p1.m4].
+
+
+
+
+It should be noted, by Proposition 1.4 of [13], that every [S1.p10.m1]-Dedekind complete Banach lattice has the property [S1.p10.m2] but the
+converse is not true in general. In fact, the Banach lattice [S1.p10.m3] has the property [S1.p10.m4] but it is not [S1.p10.m5]-Dedekind
+complete [13, Remark 1.5].
+
+
+Our notions are standard. For the theory of Banach lattices and operators,
+we refer the reader to the monographs [2, 11].
+
+
+
+2. Main results
+
+We start this section by the following definition.
+
+
+Definition 2.1.
+
+An operator [S2.Thmtheorem1.p1.m1] from a Banach space [S2.Thmtheorem1.p1.m2] into a
+Banach lattice [S2.Thmtheorem1.p1.m3] is called weak almost limited if [S2.Thmtheorem1.p1.m4] carries each
+relatively weakly compact set in [S2.Thmtheorem1.p1.m5] to an almost limited set in [S2.Thmtheorem1.p1.m6].
+
+
+
+
+Clearly, a Banach lattice [S2.p2.m1] has the DP* property (resp. wDP* property) if
+and only if the identity operator [S2.p2.m2] is weak* Dunford-Pettis
+(resp. weak almost limited). Also, every weak* Dunford-Pettis (resp. almost
+limited) operator [S2.p2.m3] is weak almost limited, but the
+converse is not true in general. In fact, the identity operator [S2.p2.m4] (resp. [S2.p2.m5]) is weak almost limited but it fail to be weak*
+Dunford-Pettis (resp. almost limited).
+
+
+In terms of weakly compact and almost limited operators the weak almost
+limited operators are characterized as follows.
+
+
+Theorem 2.2.
+
+For an operator [S2.Thmtheorem2.p1.m1], the following assertions
+are equivalents:
+
+
+
+(1)
+
+[S2.I1.i1.p1.m1] is weak almost limited.
+
+(2)
+
+If [S2.I1.i2.p1.m1] is a weakly compact operator, where [S2.I1.i2.p1.m2] is an
+arbitrary Banach space, then the operator [S2.I1.i2.p1.m3] is almost limited.
+
+(3)
+
+If [S2.I1.i3.p1.m1] is a weakly compact operator then the
+operator [S2.I1.i3.p1.m2] is almost limited.
+
+(4)
+
+For every weakly null sequence [S2.I1.i4.p1.m1] and
+every disjoint weak* null sequence [S2.I1.i4.p1.m2]
+we have [S2.I1.i4.p1.m3].
+
+
+
+
+
+Proof.
+
+[S2.p4.m1] Let [S2.p4.m2] be a disjoint weak* null sequence. We shall proof that [S2.p4.m3]. Otherwise, by choosing a subsequence we may suppose that
+there is [S2.p4.m4] with [S2.p4.m5] for all [S2.p4.m6].
+So for every [S2.p4.m7] there exists some [S2.p4.m8] with [S2.p4.m9].
+
+
+On the other hand, as [S2.p5.m1] is weakly compact, [S2.p5.m2] is a relatively weakly compact subset of [S2.p5.m3] .
+Then [S2.p5.m4]
+is an almost limited set in [S2.p5.m5] (as [S2.p5.m6] is weak almost limited). So [S2.p5.m7] as [S2.p5.m8]. But this implies that [S2.p5.m9], which is impossible. Thus, [S2.p5.m10], and hence [S2.p5.m11] is almost limited.
+
+
+[S2.p6.m1] Obvious.
+
+
+[S2.p7.m1] Let [S2.p7.m2] be a weakly null sequence and let [S2.p7.m3] be a disjoint weak* null sequence. By Theorem 5.26 [2],
+the operator [S2.p7.m4] defined by [S2.p7.m5], is weakly
+compact. Thus, by our hypothesis [S2.p7.m6] is almost limited and hence [S2.p7.m7]. But
+
+
+
+[S2.Ex1.m1]
+[S2.Ex1.m2]
+[S2.Ex1.m3]
+
+
+
+
+[S2.Ex2.m2]
+[S2.Ex2.m3]
+
+
+for every [S2.p7.m8], where [S2.p7.m9] is the canonical basis of [S2.p7.m10]. Then [S2.p7.m11], as
+desired.
+
+
+[S2.p8.m1] Let [S2.p8.m2] be a relatively
+weakly compact subset of [S2.p8.m3]. If [S2.p8.m4] is not almost limited
+set in [S2.p8.m5] then there exists a disjoint weak* null sequence [S2.p8.m6] such that [S2.p8.m7]. By choosing a subsequence we may suppose that there is [S2.p8.m8] with [S2.p8.m9] for all [S2.p8.m10]. So for every [S2.p8.m11] there exists some [S2.p8.m12] with [S2.p8.m13].
+
+
+On the other hand, since [S2.p9.m1] is a relatively weakly compact subset of [S2.p9.m2],
+there exists a subsequence [S2.p9.m3] of [S2.p9.m4] such that [S2.p9.m5] holds in [S2.p9.m6].
+By hypothesis, [S2.p9.m7] and clearly [S2.p9.m8]. Now from [S2.p9.m9] we see that [S2.p9.m10], which is impossible. Thus, [S2.p9.m11] is an
+almost limited set in [S2.p9.m12], and so [S2.p9.m13] is weak almost limited.
+∎
+
+
+
+Remark 2.3.
+
+Every operator [S2.Thmtheorem3.p1.m1] that admits a factorization
+through the Banach lattice [S2.Thmtheorem3.p1.m2], is weak almost limited.
+
+
+In fact, let [S2.Thmtheorem3.p2.m1] and [S2.Thmtheorem3.p2.m2] be two operators such that [S2.Thmtheorem3.p2.m3]. Let [S2.Thmtheorem3.p2.m4] be a weakly null sequence and let [S2.Thmtheorem3.p2.m5] be a disjoint weak* null sequence. Clearly [S2.Thmtheorem3.p2.m6] holds in [S2.Thmtheorem3.p2.m7] and [S2.Thmtheorem3.p2.m8] holds in [S2.Thmtheorem3.p2.m9]. Since [S2.Thmtheorem3.p2.m10] has the Dunford-Pettis*
+property then [S2.Thmtheorem3.p2.m11]. Thus [S2.Thmtheorem3.p2.m12] is weak almost
+limited.
+
+
+
+The next result characterizes, under some conditions, the order bounded weak
+almost limited operators between two Banach lattices.
+
+
+Theorem 2.4.
+
+Let [S2.Thmtheorem4.p1.m1] and [S2.Thmtheorem4.p1.m2] be two Banach lattices such that the
+lattice operations of [S2.Thmtheorem4.p1.m3] are sequentially weak* continuous or [S2.Thmtheorem4.p1.m4]
+satisfy the property [S2.Thmtheorem4.p1.m5]. Then for an order bounded operator [S2.Thmtheorem4.p1.m6], the following assertions are equivalents:
+
+
+
+(1)
+
+[S2.I2.i1.p1.m1] is weak almost limited.
+
+(2)
+
+For every weakly null sequence [S2.I2.i2.p1.m1] and
+every disjoint weak* null sequence [S2.I2.i2.p1.m2]
+we have [S2.I2.i2.p1.m3].
+
+(3)
+
+For every disjoint weakly null sequence [S2.I2.i3.p1.m1]
+and every disjoint weak* null sequence [S2.I2.i3.p1.m2] we have [S2.I2.i3.p1.m3].
+
+(4)
+
+For every disjoint weakly null sequence [S2.I2.i4.p1.m1] and every disjoint weak* null sequence [S2.I2.i4.p1.m2] we have [S2.I2.i4.p1.m3].
+
+(5)
+
+[S2.I2.i5.p1.m1] carries the solid hull of each relatively weakly compact subset of
+[S2.I2.i5.p1.m2] to an almost limited subset of [S2.I2.i5.p1.m3].
+
+
+
+
+If [S2.Thmtheorem4.p3.m1] has the property [S2.Thmtheorem4.p3.m2], we may add:
+
+
+
+[S2.I3.ix1.m1]
+
+[S2.I3.ix1.p1.m1] for every weakly null sequence [S2.I3.ix1.p1.m2] and every disjoint weak[S2.I3.ix1.p1.m3] null sequence [S2.I3.ix1.p1.m4].
+
+[S2.I3.ix2.m1]
+
+[S2.I3.ix2.p1.m1] for every disjoint weakly null sequence [S2.I3.ix2.p1.m2] and every disjoint weak[S2.I3.ix2.p1.m3] null sequence [S2.I3.ix2.p1.m4].
+
+
+
+
+
+Proof.
+
+[S2.p11.m1] and [S2.p11.m2] Follows from Theorem 2.2.
+
+
+[S2.p12.m1] and [S2.p12.m2] are obvious.
+
+
+[S2.p13.m1] Let [S2.p13.m2] be a relatively
+weakly compact subset of [S2.p13.m3] and let [S2.p13.m4]
+be a disjoint weak* null sequence. Put [S2.p13.m5] and
+note that if [S2.p13.m6] is a disjoint
+sequence then by Theorem 4.34 of [2] [S2.p13.m7]. Thus, by our hypothesis [S2.p13.m8] for
+every disjoint sequence [S2.p13.m9] and every
+disjoint weak* null sequence [S2.p13.m10]. Now,
+by Theorem 2.7 of [10] [S2.p13.m11] is almost limited.
+
+
+
+[S2.p14.m1] Obvious.
+
+
+[S2.p15.m1] and [S2.p15.m2] are obvious.
+
+
+[S2.p16.m1] and [S2.p16.m2] Let [S2.p16.m3] be a
+weakly null (resp. disjoint weakly null) sequence and let [S2.p16.m4] be a disjoint weak* null sequence.
+
+
+If [S2.p17.m1] has the property [S2.p17.m2] then [S2.p17.m3]. So from the inequalities [S2.p17.m4] and [S2.p17.m5], the sequences [S2.p17.m6], [S2.p17.m7]
+are weak* null. Finally, by [S2.p17.m8] (resp. [S2.p17.m9]), [S2.p17.m10].
+∎
+
+
+
+As consequence of Theorem 2.4 we obtain the following
+characterization of the wDP* property which is a generalization of Theorem
+3.2 of [5].
+
+
+Corollary 2.5.
+
+Let [S2.Thmtheorem5.p1.m1] be a Banach lattice with the property [S2.Thmtheorem5.p1.m2]. Then the
+following assertions are equivalents:
+
+
+
+(1)
+
+[S2.I4.i1.p1.m1] has the wDP* property.
+
+(2)
+
+For every weakly null sequence [S2.I4.i2.p1.m1] and
+every disjoint weak* null sequence [S2.I4.i2.p1.m2]
+we have [S2.I4.i2.p1.m3].
+
+(3)
+
+For every disjoint weakly null sequence [S2.I4.i3.p1.m1]
+and every disjoint weak* null sequence [S2.I4.i3.p1.m2] we have [S2.I4.i3.p1.m3].
+
+(4)
+
+For every disjoint weakly null sequence [S2.I4.i4.p1.m1] and every disjoint weak* null sequence [S2.I4.i4.p1.m2] we have [S2.I4.i4.p1.m3].
+
+(5)
+
+The solid hull of every relatively weakly compact set in [S2.I4.i5.p1.m1] is almost
+limited.
+
+(6)
+
+[S2.I4.i6.p1.m1] for every weakly null
+sequence [S2.I4.i6.p1.m2] and every disjoint weak* null
+sequence [S2.I4.i6.p1.m3].
+
+
+(7)
+
+[S2.I4.i7.p1.m1] for every disjoint weakly
+null sequence [S2.I4.i7.p1.m2] and every disjoint weak*
+null sequence [S2.I4.i7.p1.m3].
+
+
+
+
+
+Recently, the authors in [6] demonstrated that if a positive weak*
+Dunford-Pettis operator [S2.p19.m1] has its range in [S2.p19.m2]-Dedekind complete Banach lattice, then every positive operator [S2.p19.m3] that it dominates (i.e., [S2.p19.m4]) is also weak*
+Dunford-Pettis [6, Theorem 3.1]. For the positive weak almost
+limited operators, the situation still hold when [S2.p19.m5] satisfy the property
+(d).
+
+
+Corollary 2.6.
+
+Let [S2.Thmtheorem6.p1.m1] and [S2.Thmtheorem6.p1.m2] be two Banach lattices such that [S2.Thmtheorem6.p1.m3]
+satisfy the property [S2.Thmtheorem6.p1.m4]. Let [S2.Thmtheorem6.p1.m5] be two
+positive operators such that [S2.Thmtheorem6.p1.m6]. Then [S2.Thmtheorem6.p1.m7] is a weak almost
+limited operator whenever [S2.Thmtheorem6.p1.m8] is one.
+
+
+
+Proof.
+
+Follows immediately from Theorem 2.4 by noting that [S2.p20.m1] for
+every disjoint weakly null sequence [S2.p20.m2] and
+every disjoint weak* null sequence [S2.p20.m3].
+∎
+
+
+
+Note that, clearly, every almost limited operator [S2.p21.m1], from a
+Banach space into a Banach lattice, is weak almost limited. But the converse
+is not true in general. Indeed, the identity operator [S2.p21.m2] is Dunford-Pettis (and hence weak almost limited)
+but it is not almost limited.
+
+
+The next result characterizes pairs of Banach lattices [S2.p22.m1], [S2.p22.m2] for which
+every positive weak almost limited operator [S2.p22.m3] is almost
+limited.
+
+
+Theorem 2.7.
+
+Let [S2.Thmtheorem7.p1.m1] and [S2.Thmtheorem7.p1.m2] be two Banach lattices such that [S2.Thmtheorem7.p1.m3]
+has the property [S2.Thmtheorem7.p1.m4]. Then, the following statements are
+equivalents:
+
+
+
+(1)
+
+Every order bounded weak almost limited operator [S2.I5.i1.p1.m1] is
+almost limited.
+
+(2)
+
+Every positive weak almost limited operator [S2.I5.i2.p1.m1] is
+almost limited.
+
+(3)
+
+One of the following assertions is valid:
+
+
+
+(i)
+
+[S2.I5.i3.I1.ix1.p1.m1] has the positive dual Schur property.
+
+(ii)
+
+The norm of [S2.I5.i3.I1.ix2.p1.m1] is order continuous.
+
+
+
+
+
+
+
+Proof.
+
+[S2.p23.m1] Obvious.
+
+
+[S2.p24.m1] Assume by way of
+contradiction that [S2.p24.m2] does not have the positive dual Schur property and
+the norm of [S2.p24.m3] is not order continuous. We have to construct a
+positive weak almost limited operator [S2.p24.m4] which is not almost
+limited. To this end, since the norm of [S2.p24.m5] is not order continuous,
+there exists a disjoint sequence [S2.p24.m6] satisfying [S2.p24.m7] and [S2.p24.m8]
+for all [S2.p24.m9] and for some [S2.p24.m10](see Theorem
+4.14 of [2]).
+
+
+On the other hand, since [S2.p25.m1] does not have the positive dual Schur property,
+then there is a disjoint weak* null sequence [S2.p25.m2]
+such that [S2.p25.m3] is not norm null. By choosing a subsequence we may
+suppose that there is [S2.p25.m4] with [S2.p25.m5] for all [S2.p25.m6]. From the equality [S2.p25.m7], there exists a sequence [S2.p25.m8] such that [S2.p25.m9]
+holds for all [S2.p25.m10].
+
+
+Now, consider the operators [S2.p26.m1] and [S2.p26.m2] defined by
+
+
+
+[S2.Ex3.m1]
+
+
+and
+
+
+
+[S2.Ex4.m1]
+
+
+for each [S2.p26.m3] and each [S2.p26.m4]. Since
+
+
+
+[S2.Ex5.m1]
+
+
+for each [S2.p26.m5] and each [S2.p26.m6], the operator [S2.p26.m7] is well
+defined, and clearly [S2.p26.m8] and [S2.p26.m9] are positives. Now, consider the positive
+operator [S2.p26.m10], and note that [S2.p26.m11] for each [S2.p26.m12]. Clealry,
+as [S2.p26.m13] has the Schur property, then [S2.p26.m14] is Dunford-Pettis and hence [S2.p26.m15] is weak almost limited. However, for the disjoint weak* null sequence [S2.p26.m16], we have for every [S2.p26.m17],
+
+
+
+[S2.Ex6.m1]
+
+
+
+
+Thus
+
+
+
+[S2.Ex7.m1]
+
+
+for every [S2.p27.m1]. This show that [S2.p27.m2] is not almost limited, and we are done.
+
+
+[S2.p28.m1] In this case, every operator [S2.p28.m2] is almost limited. In fact, let [S2.p28.m3] be a disjoint weak* null sequence. Since [S2.p28.m4] has the
+property [S2.p28.m5] then the positive disjoint sequence [S2.p28.m6] is weak* null. So by the
+positive dual Schur property of [S2.p28.m7], [S2.p28.m8], and hence [S2.p28.m9], as desired.
+
+
+[S2.p29.m1] According to Proposition 4.4 of [10] it is sufficient to show [S2.p29.m2] for every norm bounded disjoint sequence [S2.p29.m3] and every disjoint weak* null sequence [S2.p29.m4]. As the norm of [S2.p29.m5] is order
+continuous then every norm bounded disjoint sequence [S2.p29.m6] is weakly null [11, Theorem 2.4.14]. Now, since [S2.p29.m7] is
+an order bounded weak almost limited operator then by Theorem 2.4 [S2.p29.m8] for
+every norm bounded disjoint sequence [S2.p29.m9] and
+every disjoint weak* null sequence [S2.p29.m10]. This complete the proof.
+∎
+
+
+
+As consequence of Theorem 2.7, we obtain the following
+corollary.
+
+
+Corollary 2.8.
+
+For a Banach lattices [S2.Thmtheorem8.p1.m1] with the property [S2.Thmtheorem8.p1.m2], [S2.Thmtheorem8.p1.m3] has
+an order continuous norm if and only if every positive weak almost limited
+operator [S2.Thmtheorem8.p1.m4] is almost limited.
+
+
+
+Proof.
+
+Follows from Theorem 2.7 by noting that if [S2.p31.m1] has the
+positive dual Schur property then the norm of [S2.p31.m2] is order
+continuous.
+∎
+
+
+
+As the Banach space [S2.p32.m1] has the Schur property then every operator [S2.p32.m2] is weak almost limited. Another consequence of
+Theorem 2.7 is the following characterization of the
+positive dual Schur property.
+
+
+Corollary 2.9.
+
+A Banach lattices [S2.Thmtheorem9.p1.m1] with the property [S2.Thmtheorem9.p1.m2], has the positive
+dual Schur property if and only if every positive operator [S2.Thmtheorem9.p1.m3] is almost limited.
+
+
+
+Recall that a reflexive Banach space with the Dunford-Pettis property is
+finite dimensional [2, Theorem 5.83]. We can prove a similar result
+for Banach lattices as follows.
+
+
+Proposition 2.10.
+
+Let [S2.Thmtheorem10.p1.m1] be a Banach lattice with the wDP* property. If the norms of [S2.Thmtheorem10.p1.m2] and [S2.Thmtheorem10.p1.m3] are order continuous then [S2.Thmtheorem10.p1.m4] is finite dimensional.
+
+
+In particular, a reflexive Banach lattice with the wDP* property is finite
+dimensional.
+
+
+
+Proof.
+
+Assume that the norms of [S2.p34.m1] and [S2.p34.m2] are order continuous. As [S2.p34.m3]
+has the wDP* property the identity operator [S2.p34.m4] is weak
+almost limited. Since the norm of [S2.p34.m5] is order continuous then, by
+Theorem 2.7, [S2.p34.m6] is almost limited. So [S2.p34.m7] has the positive
+dual Schur property. Now, as the norm of [S2.p34.m8] is order continuous then [S2.p34.m9] is
+finite dimensional [13, Proposition 2.1 (b)]. For the second part,
+it is enough to note that if [S2.p34.m10] is a reflexive Banach lattice then the
+norms of [S2.p34.m11] and [S2.p34.m12] are order continuous [2, Theorem 4.70].
+∎
+
+
+
+Note that from Theorem 2.4, it is easy to see that if [S2.p35.m1] is
+a Banach lattice with property [S2.p35.m2] then every order bounded
+almost Dunford-Pettis operator [S2.p35.m3] is weak almost limited.
+But the convers is false in general. In fact, the identity operator [S2.p35.m4] is weak almost limited operator but
+it fail to be almost Dunford-Pettis.
+
+
+The following result characterizes pairs of Banach lattices [S2.p36.m1], [S2.p36.m2] for
+which every positive weak almost limited operator operator [S2.p36.m3]
+is almost Dunford-Pettis.
+
+
+Theorem 2.11.
+
+Let [S2.Thmtheorem11.p1.m1] and [S2.Thmtheorem11.p1.m2] be two Banach lattices such that [S2.Thmtheorem11.p1.m3] is [S2.Thmtheorem11.p1.m4]-Dedekind complete. Then, the following statements are equivalents:
+
+
+
+(1)
+
+Every order bounded weak almost limited operator [S2.I6.i1.p1.m1] is
+almost Dunford-Pettis.
+
+(2)
+
+Every positive weak almost limited operator [S2.I6.i2.p1.m1] is
+almost Dunford-Pettis.
+
+(3)
+
+One of the following assertions is valid:
+
+
+
+(i)
+
+[S2.I6.i3.I1.ix1.p1.m1] has the positive Schur property.
+
+(ii)
+
+The norm of [S2.I6.i3.I1.ix2.p1.m1] is order continuous.
+
+
+
+
+
+
+
+Proof.
+
+[S2.p37.m1] Obvious.
+
+
+[S2.p38.m1] Assume by way of
+contradiction that [S2.p38.m2] does not have the positive Schur property and the
+norm of [S2.p38.m3] is not order continuous. We have to construct a positive weak
+almost limited operator [S2.p38.m4] which is not almost
+Dunford-Pettis. As [S2.p38.m5] does not have the positive Schur property, then there
+exists a disjoint weakly null sequence [S2.p38.m6] in [S2.p38.m7] which is not
+norm null. By choosing a subsequence we may suppose that there is [S2.p38.m8] with [S2.p38.m9] for all [S2.p38.m10]. From the equality [S2.p38.m11], there exists a sequence
+[S2.p38.m12] such that [S2.p38.m13] and [S2.p38.m14] holds for all [S2.p38.m15].
+
+
+Now, consider the operator [S2.p39.m1] defined by
+
+
+
+[S2.Ex8.m1]
+
+
+On the other hand, since the norm of [S2.p39.m2] is not order continuous, it follows
+from Theorem 4.51 of [2] that [S2.p39.m3] is lattice embeddable
+in [S2.p39.m4], i.e., there exists a lattice homomorphism [S2.p39.m5] and there exist tow positive constants [S2.p39.m6] and [S2.p39.m7] satisfying
+
+
+
+[S2.Ex9.m1]
+
+
+for all [S2.p39.m8]. Put [S2.p39.m9], and note that [S2.p39.m10] is a positive weak almost limited operator (see
+Remark 2.3). However, for the disjoint weakly null sequence [S2.p39.m11], we have
+
+
+
+[S2.Ex10.m1]
+
+
+for every [S2.p39.m12]. This show that [S2.p39.m13] is not almost Dunford-Pettis, and we are
+done.
+
+
+[S2.p40.m1] In this case, every operator [S2.p40.m2] is almost Dunford-Pettis.
+
+
+[S2.p41.m1] Let [S2.p41.m2] be an
+order bounded weak almost limited operator and let [S2.p41.m3] be a positive disjoint weakly null sequence. We shall show that [S2.p41.m4]. By corollary 2.6 of [7],
+it suffices to proof that [S2.p41.m5] and [S2.p41.m6] for every
+disjoint and norm bounded sequence [S2.p41.m7].
+
+
+Indeed
+
+
+- Let [S2.p43.m1]. By Theorem 1.23 of [2],
+for each [S2.p43.m2] there exists some [S2.p43.m3] with [S2.p43.m4]. Note that the
+adjoint operator [S2.p43.m5] is order bounded
+[2, Theorem 1.73], and pick some [S2.p43.m6]
+with [S2.p43.m7]. So [S2.p43.m8] for all [S2.p43.m9]. Since [S2.p43.m10], then [S2.p43.m11] and
+hence [S2.p43.m12]. Thus [S2.p43.m13].
+
+
+- Let [S2.p44.m1] be a
+disjoint and norm bounded sequence. As the norm of [S2.p44.m2] is order continuous,
+then by corollary 2.4.3 of [11] [S2.p44.m3]. Now, since [S2.p44.m4] is an order bounded weak almost limited then [S2.p44.m5] (Theorem 2.4). This
+complete the proof.
+∎
+
+
+
+As consequence of Theorem 2.11, we obtain the following
+corollary.
+
+
+Corollary 2.12.
+
+A [S2.Thmtheorem12.p1.m1]-Dedekind complete Banach lattices [S2.Thmtheorem12.p1.m2] has an order continuous
+norm if and only if every order bounded weak almost limited operator [S2.Thmtheorem12.p1.m3] is almost Dunford-Pettis.
+
+
+
+By Remark 2.3 every operator [S2.p46.m1] is weak
+almost limited. As another consequence of Theorem 2.11, we obtain
+the following characterization of the positive Schur property.
+
+
+Corollary 2.13.
+
+A Banach lattices [S2.Thmtheorem13.p1.m1] has the positive Schur property if and only if every
+positive operator [S2.Thmtheorem13.p1.m2] is almost Dunford-Pettis.
+
+
+
+
+References
+
+[1]
+ Aliprantis, C.D. and Burkinshaw, O.: Dunford-Pettis
+operators on Banach lattices, Trans. Amer. Math. Soc. 274 (1982),
+227-238.
+
+
+[2]
+ Aliprantis, C.D. and Burkinshaw, O.: Positive operators. Reprint of the 1985 original. Springer, Dordrecht, 2006.
+
+
+[3]
+ Bouras, K.: Almost Dunford–Pettis sets in Banach
+lattices. Rend. Circ. Mat. Palermo (2013) 62:227–236.
+
+
+[4]
+ Bouras, K. and Moussa, M.: Banach lattices with weak
+Dunford-Pettis property, World Academy of Science, Engineering and
+Technology. International Journal of Engineering and Mathematical Science,
+50 (2011), 773–777.
+
+
+[5]
+ Chen J.X., Chen Z.L., Ji G.X.: Almost limited sets in
+Banach lattices, J. Math. Anal. Appl. 412 (2014) 547–553.
+
+
+[6]
+ Chen J.X., Chen Z.L., Ji G.X.: Domination by positive
+weak* Dunford-Pettis operators on Banach lattices, http://arxiv.org/abs/1311.2808
+
+[7]
+ Dodds P.G. and Fremlin D.H.: Compact operators on Banach
+lattices, Israel J. Math. 34 (1979) 287-320.
+
+
+[8]
+ H’michane J., El Kaddouri A., Bouras K., Moussa M.: On
+the class of limited operators, Acta Math. Sci., to appear.
+
+
+[9]
+ El Kaddouri A., H’michane J., Bouras K., Moussa M.: On
+the class of weak* Dunford-Pettis operators, Rend. Circ. Mat. Palermo (2)
+62 (2013), 261-265.
+
+
+[10]
+ Machrafi N., Elbour A., Moussa M.: Some
+characterizations of almost limited sets and applications. http://arxiv.org/abs/1312.2770
+
+[11]
+ Meyer-Nieberg P.: Banach lattices. Universitext.
+Springer-Verlag, Berlin, 1991.
+
+
+[12]
+ Wnuk W.: Banach lattices with the weak Dunford-Pettis
+property. Atti Sem. Mat. Fis. Univ. Modena 42 (1994), no. 1,
+227–236.
+
+
+[13]
+ Wnuk W.: On the dual positive Schur property in
+Banach lattices. Positivity (2013) 17:759–773.
+
+
+
+
+
+
+
+Generated  on Mon Aug 22 10:00:42 2022 by LaTeXML 
+
+
+

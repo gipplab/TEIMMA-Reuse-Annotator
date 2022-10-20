@@ -1,0 +1,135 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>mathPlag annotator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+  <script type="text/javascript" src="{% static 'js/introJS.js' %}"></script>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>Math Plagiarism Annotator</h1>
+</div>
+
+<div class="topnav">
+  <a href="http://localhost:8000/mainUI/">Home</a> 
+  <a href="#">About</a>
+</div>
+
+{% block renderAll %}
+
+<div class="row" style="border:thick;">
+  <form method="post" id="srcDoc" enctype="multipart/form-data">
+  {% csrf_token %}
+  <div class="column" id="leftColumn">
+    <h2 class="h2margincol">
+      Suspicious document <br/>
+      <input class="h2Fileuploadleft" type="file" name="suspiciousDoc">
+    </h2>
+  </div>  
+  <div class="column">
+    <h2>  
+    </h2>
+  </div>
+  <div class="column" >
+    <h2 class="h2margincol">
+      Source document <br/>
+      <input class="h2Fileuploadright" type="file" name="sourceDoc">
+      <button class="h2Fileuploadbutton" type="submit" name="uploadFiles" value="uploadFiles"> Upload Files</button>
+    </h2>
+  </div> 
+  </form> 
+</div>
+
+<!--
+<div class="row" style="border:thick;">
+  <form method="post" id="suspDoc" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="columnSub" id="buttonColumn">
+      <input class="h2Fileuploadleft" type="file" name="suspiciousDoc">
+      <input class="h2Fileuploadright" type="file" name="sourceDoc">
+      <button class="h2Fileuploadbutton" type="submit" name="finalButton" value="finalButton"> Upload Files</button>
+    </div>
+  </form>
+</div>  
+-->
+
+<div id="content">
+  {% block leftColumn %}
+  <div id="left">
+    <h2 class="centerAbs"> Suspicious document text appears here </h2>
+  </div>
+  {% endblock %}
+
+  <div id="center">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <hr size="8" color="black"> 
+      <h2> Recording </h2>
+      <hr size="4" color="black"> 
+      <button type="submit" name="viewAll" value="viewAll">View all recorded cases</button>
+      <h2> </h2>
+      <button type="submit" name="startRecording" value="startRecording">Start Recording</button>
+      <h2> </h2> 
+      <button type="submit" name="finishRecording" value="finishRecording">Finish Recording</button>
+      <h2> </h2>
+      <button type="submit" name="newRecording" value="newRecording">Delete last record</button>
+      <h2> </h2>
+      <button type="submit" name="clearAllRecording" value="clearAllRecording">Clear all recorded cases</button>
+      <hr size="8" color="black"> 
+
+    <h2>  </h2>
+
+    <h2> Type of case</h2>
+    <hr size="4" color="black"> 
+      <input type="checkbox" value="Text" name="Text">
+      <label for="Text">Text</label><br>
+    <h2>  </h2>
+      <input type="checkbox" value="Math" name="Math">
+      <label for="Math">Math</label><br>
+    <h2>  </h2>
+      <input type="checkbox" value="Image" name="Image">
+      <label for="Image">Image</label><br>
+    <hr size="8" color="black">
+    
+    <h2> Obfuscation type</h2>
+
+      <select name="obfuscType" onchange="selectChange(this.value)" ;>
+        <option value="No">No obfuscation</option>
+        <option value="Summary">Summary</option>
+        <option value="Paraphrase">Paraphrase</option>
+        <option value="MathtoText">Math-To-Text</option>
+        <option value="TexttoMath">Text-to-Math</option>
+      </select>
+      <b>Or</b>
+      enter custom type
+      <input type="text" name="InputObfusc"> </input>
+      </form>
+    <h2>  </h2>
+
+    <hr size="8" color="black">
+
+    </div>
+
+  {% block rightColumn %}
+  <div id="right">
+    <h2 class="centerAbs"> Source document text appears Here</h2>
+  </div>
+  {% endblock %}
+</div>
+
+{% endblock %}
+
+<div class="footer" style="position: fixed;">
+  <p>Developed on Earth</p>
+</div>
+
+</body>
+</html>

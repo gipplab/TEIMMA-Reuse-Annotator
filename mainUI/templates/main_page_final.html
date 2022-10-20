@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>mathPlag annotator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+}
+
+.header {
+  background-color: #f1f1f1;
+  padding: 2px;
+  text-align: center;
+  font-size: small;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: orange;
+}
+
+.topnav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 4px 16px;
+  text-decoration: none;
+}
+
+#content, html, body {
+    height: 88%;
+}
+
+#left {
+    float: left;
+    width: 44%;
+    height: 100%;
+    overflow: scroll;
+    text-align: justify;
+    background-color: lightgrey;
+}
+
+#center {
+  float: left;
+  font-size: medium;
+  text-align: center;
+  width: 8%;
+  height: 100%;
+  margin-left: 20px;
+}
+
+#right {
+    float: right;
+    width: 44%;
+    height: 100%;
+    overflow: scroll;
+    text-align: justify;
+    background-color: lightgrey;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  text-align: center;
+  font-size: medium;
+  background-color: gray;
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 3px;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Math Plagiarism Annotator</h1>
+</div>
+
+<div class="topnav">
+  <a href="#">About</a>
+  <a href="#">Imprints</a>
+  <a href="#">SignIn</a>
+</div>
+
+<div class="row" style="border:thick;">
+  <div class="column" >
+    <h2>Suspicious document <input type="file" id="myfile" name="myfile"></h2>     
+  </div>  
+  <div class="column">
+    <h2> </h2>
+  </div>
+  <div class="column" >
+    <h2>Ref Source document <input type="file" id="myfile" name="myfile"></h2>     
+  </div>  
+</div>
+
+
+<div id="content">
+  <div id="left">
+    {% include src %}
+  </div>
+  
+  <div id="center">
+    <form>
+      <h2> </h2>
+      <button formaction="">Preview of recorded cases</button>
+      <h2> </h2>
+      <button formaction="">Start Recording</button>
+      <h2> </h2>
+      <button formaction="">Finish Recording</button>
+       <h2> </h2>
+      <button formaction="">New Recording</button>
+    </form>
+
+    <form> <h2>  </h2> </form>
+
+  <form action="/action_page.php">
+    <input type="checkbox" id="OnlyText" name="OnlyText">
+    <label for="OnlyText">Only Text</label><br>
+<form> <h2>  </h2> </form>
+    <input type="checkbox" id="MathandText" name="MathandText">
+    <label for="MathandText">Text and Math</label><br>
+<form> <h2>  </h2> </form>
+    <input type="checkbox" id="ImageText" name="ImageText">
+    <label for="ImageText">Text and Image</label><br><br>
+<form> <h2>  </h2> </form>
+    <input type="checkbox" id="ImageTextMath" name="ImageTextMath">
+    <label for="ImageTextMath">Text and Math and Image</label><br><br>
+</form>
+  </div>
+
+  <div id="right">
+    {% include susp %}
+  </div>
+</div>
+
+<div class="footer">
+  <p>Developed on Earth</p>
+</div>
+
+</body>
+</html>

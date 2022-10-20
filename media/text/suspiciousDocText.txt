@@ -1,0 +1,561 @@
+xml version="1.0" encoding="utf-8"?
+html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd"
+
+
+Almost limited sets in Banach lattices
+Generated on Mon Aug 22 10:00:30 2022 by LaTeXML (version 0.8.5) http://dlmf.nist.gov/LaTeXML/.
+
+
+
+
+
+
+
+
+
+
+Almost limited sets in Banach lattices
+
+
+Jin Xi Chen 
+
+College of Mathematics and Information Science, Shaanxi Normal
+University, Xi’an 710062, P.R. China
+
+Department of Mathematics, Southwest Jiaotong
+University, Chengdu 610031, P.R. China
+
+jinxichen@home.swjtu.edu.cn
+
+, 
+Zi Li Chen
+
+Department of Mathematics, Southwest Jiaotong
+University, Chengdu 610031, P.R. China
+
+zlchen@home.swjtu.edu.cn
+
+ and 
+Guo Xing Ji
+
+College of Mathematics and Information Science, Shaanxi Normal
+University, Xi’an 710062, P.R. China
+
+gxji@snnu.edu.cn
+
+Abstract.
+We introduce and study the class of almost limited sets in Banach lattices, that is, sets on which every disjoint weak[m1] null sequence of functionals converges uniformly to zero. It is established that a Banach lattice has order continuous norm if and only if almost limited sets and [m2]-weakly compact sets coincide. In particular, in terms of almost Dunford-Pettis operators into [m3], we give an operator characterization of those [m4]- Dedekind complete Banach lattices whose relatively weakly compact sets are almost limited, that is, for a [m5]-Dedekind Banach lattice [m6], every relatively weakly compact set in [m7] is almost limited if and only if every continuous linear operator [m8] is an almost Dunford-Pettis operator.
+
+
+Key words and phrases:almost limited set, the wDP[m9] property, almost Dunford-Pettis operator, positive Schur property, Banach lattice
+
+2000 Mathematics Subject Classification: Primary 46B42; Secondary 46B50, 47B65
+
+The first author was supported in part by NSFC (No.11301285) and the Fundamental Research Funds for the Central Universities (SWJTU11CX154). The second author was supported in part by the Fundamental Research Funds for the Central Universities (SWJTU12ZT13). The third author was support in part by NSFC (No.11371233).
+
+
+1. Introduction
+
+Throughout this paper [S1.p1.m1] will denote real Banach spaces, and [S1.p1.m2] will denote real Banach lattices. [S1.p1.m3] the closed unit ball of [S1.p1.m4]. [S1.p1.m5] denotes the solid hull of a subset [S1.p1.m6] of a Banach lattice. The positive cone of [S1.p1.m7] will be denoted by [S1.p1.m8].
+
+
+Let us recall that a bounded subset [S1.p2.m1] of [S1.p2.m2] is called a Dunford-Pettis set (resp. a limited set) in [S1.p2.m3] if each weakly null sequence in [S1.p2.m4] (resp. weak[S1.p2.m5] null sequence in [S1.p2.m6]) converges uniformly to zero on [S1.p2.m7]. Clearly, every limited set in [S1.p2.m8] is a Dunford-Pettis set, but the converse is not true in general. We say that [S1.p2.m9] has the Dunford-Pettis property whenever [S1.p2.m10] in [S1.p2.m11] and [S1.p2.m12] in [S1.p2.m13] imply [S1.p2.m14], equivalently, every relatively weakly compact set in [S1.p2.m15] is a Dunford-Pettis set, alternatively, every weakly compact operator [S1.p2.m16] is a Dunford-Pettis operator. If all limited sets in [S1.p2.m17] are relatively compact, then [S1.p2.m18] is said to be a Gelfand-Phillips space. It is well-known that all separable Banach spaces and all weakly compactly generated spaces are Gelfand-Phillips spaces. Note that a [S1.p2.m19]-Dedekind complete Banach lattice [S1.p2.m20] is a Gelfand-Phillips space if and only if the norm of [S1.p2.m21] is order continuous (cf. [7]). [S1.p2.m22] has the Dunford-Pettis[S1.p2.m23] property (the DP[S1.p2.m24] property for short ) whenever every relatively weakly compact set in [S1.p2.m25] is limited, in other words, for any weakly null sequence [S1.p2.m26] in [S1.p2.m27] and any weak[S1.p2.m28] null sequence [S1.p2.m29] in [S1.p2.m30], [S1.p2.m31]. The DP[S1.p2.m32] property, introduced first by Borwein, Fabian and Vanderwerff [4], is stronger than the Dunford-Pettis property. Carrión, Galindo and Lourenço [9] showed that [S1.p2.m33] has the DP[S1.p2.m34] property if, and only if, every continuous linear operator [S1.p2.m35] is a Dunford-Pettis operator.
+
+
+Recall that a Banach lattice [S1.p3.m1] has the positive Schur property (i.e., weak Schur property) if every weakly null sequence with positive terms is norm null, equivalently, every disjoint weakly null sequence in [S1.p3.m2] is norm null. A continuous operator [S1.p3.m3] from [S1.p3.m4] into a Banach space is called almost Dunford-Pettis ([13]) if [S1.p3.m5] for every disjoint, weakly null sequence [S1.p3.m6] in [S1.p3.m7]. We say that [S1.p3.m8] has the weak Dunford-Pettis property (wDP property for short) if every weakly compact operator from [S1.p3.m9] into any Banach space [S1.p3.m10] is almost Dunford-Pettis (cf. [11]). It is obvious that the Dunford-Pettis property or the positive Schur property imply the weak Dunford-Pettis property. As Wnuk pointed out in [17], [S1.p3.m11] has the weak Dunford-Pettis property if and only if every weakly compact operator from [S1.p3.m12] into [S1.p3.m13] is almost Dunford-Pettis, equivalently, for every disjoint weakly null sequence [S1.p3.m14] in [S1.p3.m15] and every weakly null sequence [S1.p3.m16] in [S1.p3.m17], [S1.p3.m18].
+
+
+Recently, Bouras [5] considered the disjoint version of Dunford-Pettis sets and introduced the class of almost Dunford-Pettis sets in Banach lattices. Following Bouras, a bounded subset [S1.p4.m1] of a Banach lattice [S1.p4.m2] is said to be an almost Dunford-Pettis set if every disjoint weakly null sequence [S1.p4.m3] of [S1.p4.m4] converges uniformly to zero on [S1.p4.m5]. He showed that a Banach lattice [S1.p4.m6] has the weak Dunford-Pettis property if and only if every relatively weakly compact set in [S1.p4.m7] is almost Dunford-Pettis ([5]).
+
+
+Inspired by Carrión, Galindo and Lourenço [9], we may ask under what conditions every continuous operator from a Banach lattice [S1.p5.m1] into [S1.p5.m2] is almost Dunford-Pettis. In this paper, using disjoint sequence techniques we consider the disjoint version of limited sets, i.e., the almost limited sets in Banach lattices ( Definition 2.3). We introduce the weak Dunford-Pettis[S1.p5.m3] property (wDP[S1.p5.m4] property for short) which is shared by those Banach lattices whose relatively weakly compact subsets are almost limited. In terms of almost Dunford-Pettis operators into [S1.p5.m5], we also give an operator characterization of Banach lattices with the wDP[S1.p5.m6] property, that is, a [S1.p5.m7]-Dedekind Banach lattice [S1.p5.m8] has the wDP[S1.p5.m9] property if and only if every continuous operator [S1.p5.m10] is an almost Dunford-Pettis operator. (Theorem 3.5).
+
+
+Our notions are standard. The reader should see [15, 16, 17] for the (positive) Schur property and the (weak) Dunford-Pettis property of Banach lattices. For the theory of Banach lattices and operators, we refer the reader to the monographs [2, 12].
+
+
+
+2. Almost Limited Sets in Banach Lattices
+
+It should be noted that in a Banach lattice (or in its dual) the lattice operations fail to be weakly ( resp. weak[S2.p1.m1]) sequentially continuous in general. Let us recall that every disjoint sequence in the solid hull of a relatively weakly compact subset of a Banach lattice [S2.p1.m2] converges weakly to zero ([2, Theorem 13.3]). Therefore, if [S2.p1.m3] is a disjoint, weakly convergent sequence in [S2.p1.m4], then naturally the sequences [S2.p1.m5], [S2.p1.m6], [S2.p1.m7], [S2.p1.m8] all converge weakly to zero. However, as we shall see from the following example, [S2.p1.m9]-convergent disjoint sequences in the dual can not be that congenial.
+
+
+Example 2.1.
+
+
+(1)
+
+Let [S2.I1.i1.p1.m1] be a sequence of evaluation functionals on [S2.I1.i1.p1.m2]. Clearly, [S2.I1.i1.p1.m3] is a disjoint sequence and [S2.I1.i1.p1.m4] in [S2.I1.i1.p1.m5].
+
+(2)
+
+Let [S2.I1.i2.p1.m1] [S2.I1.i2.p1.m2] be defined as follows:
+[S2.I1.i2.p1.m3], [S2.I1.i2.p1.m4], [S2.I1.i2.p1.m5]
+Then [S2.I1.i2.p1.m6] is a disjoint, weak[S2.I1.i2.p1.m7] null sequence in [S2.I1.i2.p1.m8], but [S2.I1.i2.p1.m9] does not weak[S2.I1.i2.p1.m10] converge to zero. Indeed, [S2.I1.i2.p1.m11], where [S2.I1.i2.p1.m12].
+
+
+
+
+
+For a [S2.p2.m1]-Dedekind complete Banach lattice, the situation is quite different. More precisely, we have the following lemma.
+
+
+Lemma 2.2.
+
+Let [S2.Thmtheorem2.p1.m1] be a [S2.Thmtheorem2.p1.m2]-Dedekind complete Banach lattice, and let [S2.Thmtheorem2.p1.m3] be a [S2.Thmtheorem2.p1.m4]-convergent sequence of [S2.Thmtheorem2.p1.m5]. If [S2.Thmtheorem2.p1.m6] is a disjoint sequence of [S2.Thmtheorem2.p1.m7] satisfying [S2.Thmtheorem2.p1.m8] for each [S2.Thmtheorem2.p1.m9], then the sequences [S2.Thmtheorem2.p1.m10], [S2.Thmtheorem2.p1.m11], [S2.Thmtheorem2.p1.m12], [S2.Thmtheorem2.p1.m13] all weak[S2.Thmtheorem2.p1.m14] converge to zero. In particular, if [S2.Thmtheorem2.p1.m15] is a disjoint [S2.Thmtheorem2.p1.m16]-convergent sequence in its own right, then the sequences [S2.Thmtheorem2.p1.m17], [S2.Thmtheorem2.p1.m18], [S2.Thmtheorem2.p1.m19], [S2.Thmtheorem2.p1.m20] are all weak[S2.Thmtheorem2.p1.m21] null.
+
+
+
+Proof.
+
+Let [S2.p3.m1], and let [S2.p3.m2]. Since [S2.p3.m3] is [S2.p3.m4]-Dedekind complete and [S2.p3.m5] is a [S2.p3.m6]-convergent sequence of [S2.p3.m7], there exists [S2.p3.m8] lying in the ideal generated by [S2.p3.m9] in [S2.p3.m10] such that
+
+
+
+[S2.Ex1.m1]
+
+
+holds for all [S2.p3.m11] ( [8]; cf. [2, Theorem 13.11]). Therefore, we have
+
+
+
+[S2.Ex2.m1]
+[S2.Ex2.m2]
+[S2.Ex2.m3]
+
+
+
+
+[S2.Ex3.m2]
+[S2.Ex3.m3]
+
+
+
+
+[S2.Ex4.m2]
+[S2.Ex4.m3]
+
+
+Because [S2.p3.m12] is an order bounded disjoint sequence, we have [S2.p3.m13], and hence [S2.p3.m14]. This implies [S2.p3.m15] and [S2.p3.m16]. Finally, the inequalities [S2.p3.m17] and [S2.p3.m18] finish the proof.
+∎
+
+
+
+Next we give the definition of an almost limited set in a Banach lattice, which is the disjoint version of the limited set, and is in a sense also the [S2.p4.m1] - counterpart of the almost Dunford-Pettis set.
+
+
+Definition 2.3.
+
+A norm bounded subset [S2.Thmtheorem3.p1.m1] of [S2.Thmtheorem3.p1.m2] is said to be an almost limited set if every disjoint, weak[S2.Thmtheorem3.p1.m3] null sequence [S2.Thmtheorem3.p1.m4] of [S2.Thmtheorem3.p1.m5] converges uniformly to zero on [S2.Thmtheorem3.p1.m6], that is, [S2.Thmtheorem3.p1.m7].
+
+
+
+Now we are in a position to give some examples of almost limited sets and distinguish the class of almost limited sets from the classes of relatively (weakly) compact sets, limited sets and (almost) Dunford-Pettis sets, etc.
+
+
+
+Remark 2.4.
+
+(1) By the definition of an almost limited set, every order interval in a Banach lattice is almost limited if, and only if, [S2.Thmtheorem4.p1.m1] for each disjoint [S2.Thmtheorem4.p1.m2]-null sequence in [S2.Thmtheorem4.p1.m3] ( [2, Theorem 11.11]). Then, by Lemma 2.2, in a [S2.Thmtheorem4.p1.m4]-Dedekind complete Banach lattice every order interval is an almost limited set. If [S2.Thmtheorem4.p1.m5] is not [S2.Thmtheorem4.p1.m6]-Dedekind complete, an order interval of [S2.Thmtheorem4.p1.m7] is not necessarily almost limited. We can see this from Example 2.1(2).
+
+
+(2) It is obvious that all relatively compact sets and all limited sets in a Banach lattice are almost limited. The converse does not hold in general. For example, by [S2.Thmtheorem4.p2.m1] [S2.Thmtheorem4.p2.m2] is almost limited, but [S2.Thmtheorem4.p2.m3] is not either compact or limited. We can also find a counterexample in a Banach lattice with order continuous norm. For instance, [S2.Thmtheorem4.p2.m4] is a Gelfand-Phillips space, but there exists an order interval in [S2.Thmtheorem4.p2.m5] which is not compact, since [S2.Thmtheorem4.p2.m6] is not a discrete space (cf. [1, Corollary 21.13]). On the other hand, since [S2.Thmtheorem4.p2.m7] has order continuous norm (and hence Dedekind complete), by [S2.Thmtheorem4.p2.m8] each order interval of [S2.Thmtheorem4.p2.m9] is almost limited.
+
+
+(3) Clearly, every almost limited set is an almost Dunford-Pettis set, but the converse is not true in general. For instance, [S2.Thmtheorem4.p3.m1] is a Dunford-Pettis set (and hence an almost Dunford-Pettis set), but [S2.Thmtheorem4.p3.m2] is not almost limited. It should be noted that in a Grothendieck Banach lattice the class of almost limited sets and the class of almost Dunford-Pettis sets are the same.
+
+
+(4) A relatively weakly compact set need not be almost limited, and vice versa. For instance, [S2.Thmtheorem4.p4.m1] is weakly compact, but not almost limited. On the other hand, [S2.Thmtheorem4.p4.m2] is not weakly compact, but by [S2.Thmtheorem4.p4.m3] [S2.Thmtheorem4.p4.m4] is almost limited.
+
+
+(5) It is well known that every limited set is conditionally weakly compact [6], and the Josefson-Nissenzweig theorem precludes any possibility of the closed unit ball of an infinite dimensional Banach space being limited. However, [S2.Thmtheorem4.p5.m1] is indeed almost limited, and by Rosenthal’s [S2.Thmtheorem4.p5.m2] theorem [S2.Thmtheorem4.p5.m3] is not conditionally weakly compact.
+
+
+
+Let [S2.p6.m1] be a Banach sublattice of a Banach lattice [S2.p6.m2]. It may happen that a subset [S2.p6.m3] of [S2.p6.m4] is almost limited in [S2.p6.m5], but fails to be almost limited in [S2.p6.m6]. For example, Phillips’ lemma shows that [S2.p6.m7] is a limited set in [S2.p6.m8], but [S2.p6.m9] is not almost limited in [S2.p6.m10]. It should also be noted that the solid hull of an almost limited set in a Banach lattice is not necessarily almost limited. For instance, the singleton [S2.p6.m11] is certainly almost limited in [S2.p6.m12], but [S2.p6.m13][S2.p6.m14][S2.p6.m15] is not almost limited (see Example 2.1 (2)). A further investigation will be made in Remark 2.7 (2). The following theorem characterizes solid sets being almost limited.
+
+
+Theorem 2.5.
+
+Let [S2.Thmtheorem5.p1.m1] be a norm bounded solid subset of a [S2.Thmtheorem5.p1.m2]-Dedekind complete Banach lattice [S2.Thmtheorem5.p1.m3]. Then the following statements are equivalent.
+
+
+
+(1)
+
+[S2.I2.i1.p1.m1] is an almost limited set in [S2.I2.i1.p1.m2].
+
+(2)
+
+For each disjoint sequence [S2.I2.i2.p1.m1] in [S2.I2.i2.p1.m2] and each disjoint [S2.I2.i2.p1.m3]-null sequence [S2.I2.i2.p1.m4] in [S2.I2.i2.p1.m5], we have [S2.I2.i2.p1.m6].
+
+(3)
+
+For each disjoint sequence [S2.I2.i3.p1.m1] in [S2.I2.i3.p1.m2] and each disjoint [S2.I2.i3.p1.m3]-null sequence [S2.I2.i3.p1.m4] in [S2.I2.i3.p1.m5], we have [S2.I2.i3.p1.m6].
+
+
+
+
+
+Proof.
+
+[S2.p7.m1] Obvious.
+
+
+[S2.p8.m1] Let [S2.p8.m2] be an arbitrary disjoint [S2.p8.m3]-null sequence in [S2.p8.m4]. To finish the proof, we have to show that [S2.p8.m5]. Assume by way of contradiction that [S2.p8.m6] does not converge to 0 as [S2.p8.m7]. Then, by passing to a subsequence if necessary, we can suppose that there would exist some [S2.p8.m8] such that [S2.p8.m9] for all [S2.p8.m10]. Note that the equality [S2.p8.m11] holds, since [S2.p8.m12] is solid. Therefore, for each [S2.p8.m13] choose some [S2.p8.m14] satisfying [S2.p8.m15]. In view of Lemma 2.2, we have [S2.p8.m16]. Let [S2.p8.m17]. Because [S2.p8.m18] [S2.p8.m19], there exists some [S2.p8.m20] such that [S2.p8.m21]. Again, since [S2.p8.m22] [S2.p8.m23], choose some [S2.p8.m24] [S2.p8.m25] satisfying [S2.p8.m26]. It is easy to see that, by induction, we can find a strictly increasing subsequence [S2.p8.m27] of [S2.p8.m28] such that [S2.p8.m29] for all [S2.p8.m30]. Let
+
+
+
+[S2.Ex5.m1]
+
+
+Then, in view of [2, Lemma 13.4] [S2.p8.m31] is a disjoint sequence, and [S2.p8.m32] because [S2.p8.m33] and [S2.p8.m34] is solid. Now, we have
+
+
+
+[S2.Ex6.m1]
+[S2.Ex6.m2]
+[S2.Ex6.m3]
+
+
+
+
+[S2.Ex7.m2]
+[S2.Ex7.m3]
+
+
+
+
+[S2.Ex8.m2]
+[S2.Ex8.m3]
+
+
+
+
+[S2.Ex9.m2]
+[S2.Ex9.m3]
+
+
+Note that [S2.p8.m35] [S2.p8.m36]. Hence, [S2.p8.m37]. On the other hand, since [S2.p8.m38] is a disjoint sequence of [S2.p8.m39] and [S2.p8.m40] is a disjoint [S2.p8.m41]-null sequence in [S2.p8.m42], by hypothesis we have [S2.p8.m43]. This leads to a contradiction, and the proof is completed.
+∎
+
+
+
+Let us recall that a norm bounded subset [S2.p9.m1] of a Banach lattice [S2.p9.m2] is called to be [S2.p9.m3]-weakly compact if [S2.p9.m4] for every disjoint sequence [S2.p9.m5] contained in the solid hull of [S2.p9.m6] (cf. [12, Definition 3.6.1]). Every [S2.p9.m7]-weakly compact set is relatively weakly compact set, but the converse does not hold in general. In an [S2.p9.m8]-space, [S2.p9.m9]-weakly compact sets and relatively weakly compact sets coincide. More generally, every relatively weakly compact subset of [S2.p9.m10] is [S2.p9.m11]-weakly compact if, and only if, [S2.p9.m12] has the positive Schur property ([12, Corollary 3.6.8]). As we see from Remark 2.4 (4), an almost limited set need not be relatively weakly compact (hence not [S2.p9.m13]-weakly compact) even if the Banach lattice is Dedekind complete. The following theorem deals with the relationship of [S2.p9.m14]-weakly compact sets with almost limited sets.
+
+
+Theorem 2.6.
+
+(1) Every [S2.Thmtheorem6.p1.m1]-weakly compact set in a Banach lattice [S2.Thmtheorem6.p1.m2] is an almost limited set.
+
+
+(2) The norm of [S2.Thmtheorem6.p2.m1] is order continuous if, and only if, each almost limited set in [S2.Thmtheorem6.p2.m2] is [S2.Thmtheorem6.p2.m3]-weakly compact.
+
+
+
+Proof.
+
+(1) Let [S2.p10.m1] be an [S2.p10.m2]-weakly compact subset of [S2.p10.m3], and let [S2.p10.m4] be any disjoint [S2.p10.m5]-null sequence of [S2.p10.m6]. By Proposition 3.6.2 of [12] we have [S2.p10.m7]. The inequality [S2.p10.m8] implies that [S2.p10.m9] converges uniformly to zero on [S2.p10.m10], that is, [S2.p10.m11] is an almost limited set.
+
+
+(2) Assume that [S2.p11.m1] has order continuous norm. Let [S2.p11.m2] be an almost limited set in [S2.p11.m3]. To prove that [S2.p11.m4] is [S2.p11.m5]-weakly compact, by Proposition 3.6.2 of [12] we only need to show that [S2.p11.m6] for every norm bounded disjoint sequence [S2.p11.m7] of [S2.p11.m8], where [S2.p11.m9] is defined by
+
+
+
+[S2.Ex10.m1]
+
+
+for every [S2.p11.m10]. Assume by way of contradiction that [S2.p11.m11] does not tend to 0 as [S2.p11.m12] for some norm bounded disjoint sequence [S2.p11.m13] of [S2.p11.m14]. Then, by passing to a subsequence if necessary, we can suppose that there would exist some [S2.p11.m15] satisfying [S2.p11.m16] for all [S2.p11.m17]. For each [S2.p11.m18] choose some [S2.p11.m19] and some [S2.p11.m20] with [S2.p11.m21] such that [S2.p11.m22]. Clearly, [S2.p11.m23] is likewise a norm bounded disjoint sequence. It follows from the order continuity of the norm of [S2.p11.m24] that [S2.p11.m25] ([12, Corollary 2.4.3]). Since [S2.p11.m26] is almost limited, [S2.p11.m27] converges uniformly to 0 on [S2.p11.m28], which implies that [S2.p11.m29]. This leads to a contradiction.
+
+
+Now assume that every almost limited set in [S2.p12.m1] is [S2.p12.m2]-weakly compact. To establish that the norm of [S2.p12.m3] is order continuous, it suffices to show that every disjoint sequence [S2.p12.m4] from [S2.p12.m5] is [S2.p12.m6]-null ([12, Corollary 2.4.3]). To this end, let [S2.p12.m7]. Clearly, the singleton [S2.p12.m8] is almost limited, and hence by hypothesis [S2.p12.m9] is [S2.p12.m10]-weakly compact. By Proposition 3.6.2 of [12], we have [S2.p12.m11]. The inequality [S2.p12.m12] finishes the proof.
+∎
+
+
+
+Remark 2.7.
+
+(1) It should be noted that, in a [S2.Thmtheorem7.p1.m1]-Dedekind complete Banach lattice [S2.Thmtheorem7.p1.m2], every limited set is relatively compact (i.e., [S2.Thmtheorem7.p1.m3] is a Gelfand-Phillips space) if, and only if, the norm of [S2.Thmtheorem7.p1.m4] is order continuous (cf. [7]).
+
+
+(2) From the remarks just preceding Theorem 2.5 we see that the solid hull of an almost limited set is not necessarily almost limited. If [S2.Thmtheorem7.p2.m1] has order continuous norm, then by Theorem 2.6 (2) the solid hull of an almost limited set in [S2.Thmtheorem7.p2.m2] is almost limited, since the solid hull of an [S2.Thmtheorem7.p2.m3]-weakly set is likewise [S2.Thmtheorem7.p2.m4]-weakly compact. However, the converse does not hold in general. For instance, every norm bounded set in [S2.Thmtheorem7.p2.m5] is almost limited, but the norm of [S2.Thmtheorem7.p2.m6] is not order continuous.
+
+
+
+
+Let us recall that a norm bounded subset [S2.p13.m1] of [S2.p13.m2] is called an [S2.p13.m3] -set whenever every weakly null sequence [S2.p13.m4] of [S2.p13.m5] converges uniformly to zero on the set [S2.p13.m6], that is, [S2.p13.m7] (cf. [10]). Recently, Aqzzouz and Bouras [3] introduced the class of almost [S2.p13.m8] -sets in Banach lattices. A norm bounded subset [S2.p13.m9] of the dual [S2.p13.m10] of a Banach lattice [S2.p13.m11] is said to be an almost [S2.p13.m12] -set if every disjoint, weakly null sequence [S2.p13.m13] of [S2.p13.m14] converges uniformly to zero on [S2.p13.m15]. In [S2.p13.m16] the following implications are clear:
+
+
+
+[S2.Ex11.m1]
+
+
+From Corollary 2.12 of [5] and Theorem 2.6 it follows that if [S2.p13.m17] has order continuous norm, then the class of almost limited sets and the class of almost Dunford-Pettis sets coincide in [S2.p13.m18]. Indeed, we can say more.
+
+
+Theorem 2.8.
+
+Let [S2.Thmtheorem8.p1.m1] be a Banach lattice. If the norm of [S2.Thmtheorem8.p1.m2] is order continuous, then in [S2.Thmtheorem8.p1.m3] the class of almost limited sets, the class of almost Dunford-Pettis sets and the class of almost [S2.Thmtheorem8.p1.m4] -sets are the same.
+
+
+
+The proof of Theorem 2.8 is based on Theorem 2.6 and the following lemma.
+
+
+Lemma 2.9.
+
+Every almost [S2.Thmtheorem9.p1.m1] -set in [S2.Thmtheorem9.p1.m2] is [S2.Thmtheorem9.p1.m3] -weakly compact if and only if [S2.Thmtheorem9.p1.m4] has order continuous norm.
+
+
+
+Proof.
+
+Assume that the norm of [S2.p15.m1] is order continuous. Let [S2.p15.m2] be an almost [S2.p15.m3] -set in [S2.p15.m4]. To establish [S2.p15.m5]-weak compactness of [S2.p15.m6], by Proposition 3.6.3 of [12] we only have to show that for every norm bounded disjoint sequence [S2.p15.m7] of [S2.p15.m8],
+
+
+
+[S2.Ex12.m1]
+
+
+Assume by way of contradiction that [S2.p15.m9] does not converge to 0 for some norm bounded disjoint sequence [S2.p15.m10] of [S2.p15.m11]. Then, by passing to a subsequence if necessary, we can suppose that there exists some [S2.p15.m12] such that
+
+
+
+[S2.Ex13.m1]
+
+
+for all [S2.p15.m13]. For each [S2.p15.m14] choose some [S2.p15.m15] and some [S2.p15.m16] with [S2.p15.m17] satisfying [S2.p15.m18]. We can see that [S2.p15.m19] is a norm bounded disjoint sequence. The order continuity of the norm of [S2.p15.m20] implies that [S2.p15.m21] ([12, Corollary 2.4.14]). Since [S2.p15.m22] is an almost [S2.p15.m23] -set in [S2.p15.m24], the disjoint weakly null sequence [S2.p15.m25] converges uniformly to 0 on [S2.p15.m26], which implies that [S2.p15.m27]. This contradicts with [S2.p15.m28]. Therefore, [S2.p15.m29] is [S2.p15.m30] -weakly compact.
+
+
+For the converse, assume that each almost [S2.p16.m1] -set in [S2.p16.m2] is [S2.p16.m3] -weakly compact. To prove that [S2.p16.m4] has order continuous norm, we need only to show that every disjoint sequence [S2.p16.m5] of [S2.p16.m6] is weakly null ([12, Corollary 2.4.14]). For this, let [S2.p16.m7]. Clearly, the singleton [S2.p16.m8] is an almost [S2.p16.m9] -set in [S2.p16.m10], and by hypothesis [S2.p16.m11] is [S2.p16.m12]-weakly compact. In view of Proposition 3.6.3 of [12], we have [S2.p16.m13]. Clearly, [S2.p16.m14], as desired.
+∎
+
+
+
+
+3. The Weak Dunford-Pettis[S3.m1] Property of Banach Lattices
+
+Recall that a Banach space is said to have the DP[S3.p1.m1] property if all relatively weakly compact sets are limited. Similarly, we introduce the so-called wDP[S3.p1.m2] property of a Banach lattice.
+
+
+Definition 3.1.
+
+A Banach lattice [S3.Thmtheorem1.p1.m1] is called to have the weak Dunford-Pettis[S3.Thmtheorem1.p1.m2] property (wDP[S3.Thmtheorem1.p1.m3] property for short) if every relatively weakly compact set in [S3.Thmtheorem1.p1.m4] is almost limited.
+
+
+
+
+In other words, [S3.p2.m1] has the wDP[S3.p2.m2] property if and only if for each weakly null sequence [S3.p2.m3] in [S3.p2.m4] and each disjoint [S3.p2.m5]-null sequence in [S3.p2.m6], [S3.p2.m7].
+
+
+When the Banach lattice is [S3.p3.m1]-Dedekind complete, we can characterize the wDP[S3.p3.m2] property in terms of disjoint sequences.
+
+
+Theorem 3.2.
+
+For a [S3.Thmtheorem2.p1.m1]-Dedekind complete Banach lattice [S3.Thmtheorem2.p1.m2], the following statements are equivalent:
+
+(1)
+
+[S3.I1.i1.p1.m1] has the wDP[S3.I1.i1.p1.m2] property.
+
+(2)
+
+For each disjoint weakly null sequence [S3.I1.i2.p1.m1] and each disjoint [S3.I1.i2.p1.m2]-null sequence [S3.I1.i2.p1.m3], we have [S3.I1.i2.p1.m4].
+
+(3)
+
+For each disjoint weakly null sequence [S3.I1.i3.p1.m1] and each disjoint [S3.I1.i3.p1.m2]-null sequence [S3.I1.i3.p1.m3], we have [S3.I1.i3.p1.m4].
+
+(4)
+
+The solid hull of every relatively weakly compact set in [S3.I1.i4.p1.m1] is almost limited.
+
+
+
+
+
+Proof.
+
+Only [S3.p4.m1] needs a proof. To this end, let [S3.p4.m2] be a relatively weakly compact set in [S3.p4.m3]. It should be noted that each disjoint sequence in the solid hull [S3.p4.m4] of [S3.p4.m5] converges weakly to 0 (see [2, Theorem 13.3]). So, for every disjoint sequence [S3.p4.m6] in [S3.p4.m7] and every disjoint [S3.p4.m8]-null sequence [S3.p4.m9] of [S3.p4.m10], by hypothesis we have [S3.p4.m11]. Hence, it follows from Theorem 2.5 that [S3.p4.m12] is almost limited.
+∎
+
+
+
+Since every Banach lattice with order continuous norm is a Gelfand-Phillips space, [S3.p5.m1] has the Schur property if and only if [S3.p5.m2] has both order continuous norm and the DP[S3.p5.m3] property. Let us recall that a Banach lattice [S3.p5.m4] has the positive Schur property if and only if every relatively weakly compact subset of [S3.p5.m5] is [S3.p5.m6]-weakly compact ([12, Corollary 3.6.8]). Every Banach lattice with the positive Schur property is a KB-space (and hence has order continuous norm). Therefore, by Theorem 2.6 we have the following easy result and omit the proof.
+
+
+Proposition 3.3.
+
+A Banach lattice [S3.Thmtheorem3.p1.m1] has the positive Schur property if, and only if, [S3.Thmtheorem3.p1.m2] has order continuous norm and the wDP[S3.Thmtheorem3.p1.m3] property.
+
+
+
+Remark 3.4.
+
+(1) It is obvious that the (positive) Schur property and the DP[S3.Thmtheorem4.p1.m1] property imply the wDP[S3.Thmtheorem4.p1.m2] property. However, [S3.Thmtheorem4.p1.m3] is a Dedekind complete Banach lattice with the wDP[S3.Thmtheorem4.p1.m4] property which has neither the (positive) Schur property nor the DP[S3.Thmtheorem4.p1.m5] property since [S3.Thmtheorem4.p1.m6] has the DP[S3.Thmtheorem4.p1.m7] property without the positive Schur property, whereas [S3.Thmtheorem4.p1.m8] has the positive Schur property without the DP[S3.Thmtheorem4.p1.m9] property (a separable Banach space with the DP[S3.Thmtheorem4.p1.m10] property must have the Schur property).
+
+
+(2) Clearly, every Banach lattice with the wDP[S3.Thmtheorem4.p2.m1] property has the wDP property, but the converse is not necessarily true. For instance, [S3.Thmtheorem4.p2.m2] enjoys the Dunford-Pettis property (hence the wDP property), but by Proposition 3.3 [S3.Thmtheorem4.p2.m3] does not have the wDP[S3.Thmtheorem4.p2.m4] property.
+
+
+
+(3) It is known that if the norm dual [S3.Thmtheorem4.p3.m1] of a Banach lattice [S3.Thmtheorem4.p3.m2] has the (weak) Dunford-Pettis property, so does [S3.Thmtheorem4.p3.m3] (cf. [2, Theorem 19.5] and [17, Proposition 2]). This does not necessarily hold for the wDP[S3.Thmtheorem4.p3.m4] property. For example, [S3.Thmtheorem4.p3.m5] has the Schur property, but [S3.Thmtheorem4.p3.m6] does not have the wDP[S3.Thmtheorem4.p3.m7] property.
+
+
+
+In [9] it was proved that a Banach space [S3.p6.m1] has the DP[S3.p6.m2] property if and only if every operator from [S3.p6.m3] into [S3.p6.m4] is a Dunford-Pettis operator. On the other hand, Wnuk [17] characterized the positive Schur property of a Banach lattice: a Banach lattice [S3.p6.m5] has the positive Schur property if, and only if, [S3.p6.m6] has order continuous norm and each continuous operator [S3.p6.m7] is almost Dunford-Pettis. Comparing this with Proposition 3.3 in the present paper we naturally posed the following theorem.
+
+
+Theorem 3.5.
+
+For a [S3.Thmtheorem5.p1.m1]-Dedekind complete Banach lattice [S3.Thmtheorem5.p1.m2], the following statements are equivalent.
+
+
+
+(1)
+
+[S3.I2.i1.p1.m1] has the wDP[S3.I2.i1.p1.m2] property.
+
+(2)
+
+Every continuous operator [S3.I2.i2.p1.m1] is an almost Dunford-Pettis operator.
+
+(3)
+
+Every positive operator [S3.I2.i3.p1.m1] is an almost Dunford-Pettis operator.
+
+(4)
+
+Every positive operator [S3.I2.i4.p1.m1] is a Dunford-Pettis operator.
+
+
+
+
+
+Proof.
+
+[S3.p7.m1] Obvious.
+
+
+[S3.p8.m1] This is because a positive operator [S3.p8.m2] from a Banach lattice into a discrete Banach lattice with order continuous norm (e.g., [S3.p8.m3]) is almost Dunford-Pettis if and only if [S3.p8.m4] is Dunford-Pettis. See Example 4 of almost Dunford-Pettis operators on p. 230 of [17].
+
+
+[S3.p9.m1] To prove that [S3.p9.m2] has the wDP[S3.p9.m3] property, in view of Theorem 3.2 it is enough to show that for each disjoint weakly null sequence [S3.p9.m4] and each disjoint [S3.p9.m5]-null sequence [S3.p9.m6], we have [S3.p9.m7]. To this end, let [S3.p9.m8] be defined by [S3.p9.m9] for any [S3.p9.m10]. Clearly, the thus defined operator [S3.p9.m11] is a positive operator. By hypothesis, [S3.p9.m12] is an almost Dunford-Pettis operator. Therefore, [S3.p9.m13] as [S3.p9.m14], and hence [S3.p9.m15], as desired.
+
+
+[S3.p10.m1] Let [S3.p10.m2] be an arbitrary continuous linear operator. To finish the proof, we have to show that [S3.p10.m3] for every disjoint weakly null sequence [S3.p10.m4] of [S3.p10.m5]. Assume by way of contradiction that [S3.p10.m6] does not tend to 0 for some disjoint weakly null sequence [S3.p10.m7] of [S3.p10.m8]. Then, by passing to a subsequence if necessary, we can suppose that there would exist some [S3.p10.m9] such that [S3.p10.m10] for all [S3.p10.m11]. For every [S3.p10.m12], there exists a canonical projection, say [S3.p10.m13], from [S3.p10.m14] into its coordinate space [S3.p10.m15] such that [S3.p10.m16]. Applying the idea used in the proof of Proposition 2.1 in [9], we can show that the sequence [S3.p10.m17] can not be bounded. Again by passing to a subsequence if necessary, we can suppose that [S3.p10.m18] is strictly increasing. Then [S3.p10.m19] is a [S3.p10.m20]-null sequence of [S3.p10.m21]. Note that [S3.p10.m22] is a disjoint weakly null sequence of [S3.p10.m23]. So, in view of [2,  Ex. 22, p.73] there exists a disjoint sequence [S3.p10.m24] in [S3.p10.m25] such that
+
+
+
+[S3.Ex1.m1]
+
+
+Since [S3.p10.m26], by Lemma 2.2 we have [S3.p10.m27] in [S3.p10.m28]. By hypothesis that [S3.p10.m29] has the wDP[S3.p10.m30] property, it follows
+from Theorem 3.2 that [S3.p10.m31] as [S3.p10.m32]. On the other hand,
+
+
+
+[S3.Ex2.m1]
+
+
+This leads to a contradiction. Hence, [S3.p10.m33] for every disjoint weakly null sequence [S3.p10.m34] of [S3.p10.m35], that is, [S3.p10.m36] is an almost Dunford-Pettis operator.
+∎
+
+
+
+Let [S3.p11.m1] denote the Banach space of all continuous linear operators between Banach lattices [S3.p11.m2] and [S3.p11.m3], and let [S3.p11.m4] denote the linear subspace of all regular operators, i.e., operators which can be written as the differences of two positive operators. It may be asked whether [S3.p11.m5] holds in Theorem 3.5. An earlier result due to Wnuk [14] states that, for a [S3.p11.m6]-Dedekind complete Banach lattice [S3.p11.m7], [S3.p11.m8] if and only if [S3.p11.m9] is a discrete Banach lattice with order continuous norm. Therefore, even though [S3.p11.m10] and [S3.p11.m11] are the right spaces for Theorem 3.5, we can see that
+[S3.p11.m12],  [S3.p11.m13],   [S3.p11.m14].
+
+
+It should also be noted that the wDP property is inherited by a closed ideal of a Banach lattice [S3.p12.m1] ([17, Proposition 3]), whereas the wDP[S3.p12.m2] is not. Consider [S3.p12.m3] as a closed ideal of [S3.p12.m4]. However, by Theorem 3.5 it is not surprising that [S3.p12.m5]-Dedekind complete complemented sublattices of a [S3.p12.m6]-Dedekind complete Banach lattice with the wDP[S3.p12.m7] property have this property too.
+
+
+
+Acknowledgement
+
+The first author would like to thank deeply Professor W. Wnuk at A. Mickiewicz University of Poland for his help during the preparation of this paper.
+
+
+
+References
+
+[1]
+C.D. Aliprantis and O. Burkinshaw, Locally Solid Riesz Spaces, Pure and Applied Mathematics 76, Academic Press, New York-London, 1978.
+
+
+[2]
+ C.D. Aliprantis and O. Burkinshaw, Positive
+Operators, Pure and Applied Mathematics 119,
+Academic Press, New York, 1985.
+
+
+[3]
+B. Aqzzouz and K. Bouras, [bib.bib3.m1] sets and almost [bib.bib3.m2] sets in Banach lattices, Quaest. math. 36 (2013), 107-118.
+
+
+[4]
+ J. Borwein, M. Fabian and J. Vanderwerff, Characterizations of Banach spaces via convex and other locally Lipschitz functions, Acta Math. Vietnam, 22 (1997), 53-69.
+
+
+[5]
+K. Bouras, Almost Dunford-Pettis sets in Banach lattices, Rend. Circ. Mat. Palermo, posted on January 25, 2013, DOI 10.1007/s12215-013-0105-y (to appear in print).
+
+
+[6]
+J. Bourgain and J. Diestel, Limited operators and strict cosingularity, Math. Nachr. 119 (1984), 55-58.
+
+
+[7]
+A.V. Buhvalov, Locally convex spaces that are generated by weakly compact sets (Russian), Vestnik Leninggrad Univ. No.7 Mat. Meh. Astronom. Vyp. 2 (1973), 11-17.
+
+
+[8]
+O. Burkinshaw, Weak compactness in the order dual of a vector lattice, Trans. Amer. Math. Soc. 187 (1974), 183-201.
+
+
+[9]
+H. Carrión, P. Galindo and M.L. Lourenço, A stronger Dunford-Pettis property, Studia Math. 184 (2008), 205–216.
+
+
+[10]
+G. Emmanuele, A dual characterization of Banach spaces not containing [bib.bib10.m1], Bull. Pol. Acad. Sci., Math. 34 (1986), 155-160.
+
+
+[11]
+D.H. Leung, On the weak Dunford-Pettis property, Arch. Math. 52 (1989), 363-364.
+
+
+[12]
+ P. Meyer-Nieberg, Banach Lattices, Universitext, Springer-Verlag, Berlin, 1991.
+
+
+[13]
+J.A. Sanchez, Operators on Banach Lattices (Spanish), Ph.D. Thesis, Complutense University, Madrid, 1985.
+
+
+[14]
+W. Wnuk, A characterization of discrete Banach lattices with order continuous norms, Proc. Amer. Math. Soc. 104 (1988), 197-200.
+
+
+[15]
+W. Wnuk, Some characterizations of Banach lattices with the Schur property, Rev. Mat. Univ. Complutense Madr. 2 , Suppl.(1989), 217-224.
+
+
+[16]
+W. Wnuk, A note on the positive Schur property, Glasgow. Math. J. 31 (1989), 169-172.
+
+
+[17]
+W. Wnuk, Banach lattices with the weak Dunford-Pettis property, Atti Semin. Mat. Fis. Univ. Modena  42 (1994), 227-236.
+
+
+
+
+
+
+
+Generated  on Mon Aug 22 10:00:30 2022 by LaTeXML 
+
+
+
