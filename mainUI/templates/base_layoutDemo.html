@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TEIMMA</title>
+  <title>TEIMMA Reuse Annotator</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -19,8 +19,7 @@
 </div>
 
 <div class="topnav">
-  <a href="http://localhost:8000/mainUI/">Home</a> 
-  <a href="#">About</a>
+  <a href="http://127.0.0.1:8000/">Home</a> 
 </div>
 
 {% block renderAll %}
@@ -64,7 +63,7 @@
 <div id="content">
   {% block leftColumn %}
   <div id="left">
-    <h2 class="centerAbs"> Suspicious document text appears here </h2>
+    {% include susp %}
   </div>
   {% endblock %}
 
@@ -120,7 +119,7 @@
 
   {% block rightColumn %}
   <div id="right">
-    <h2 class="centerAbs"> Source document text appears Here</h2>
+    {% include src %}
   </div>
   {% endblock %}
 </div>

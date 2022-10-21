@@ -96,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'annotations',
         'USER': 'postgres',
-        'PASSWORD': '1234',#
+        'PASSWORD': '1234',
         #The host will be server on which you would like to save everyone elses annotations.
         'HOST': 'localhost',
         #'PORT': '',
@@ -148,5 +148,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # @Ankit location of storages for LaTex and XML files
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 MEDIA_URL = '/media/'
+
+MEDIA_ROOT_1 = os.path.join(BASE_DIR, 'images')
+MEDIA_URL_1 = 'images/'

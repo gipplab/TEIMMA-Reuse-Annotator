@@ -1,19 +1,17 @@
-{% extends 'base_layout.html' %}
 {% load static %}
 
-{% block leftColumn %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TEIMMA reuse annotator</title>
+</head>
 
-	<div id="left">
-		<pre>{{ allCases | pprint }}</pre>
-	</div>
+<body>
 
-{% endblock %}
+<div class="header">
+  <h1>All recorded cases</h1>
+</div>
 
-
-{% block rightColumn %}
-
-	<div id="right">
-		<h2>  </h2>
-	</div>
-
-{% endblock %}
+<div id="left">
+	<pre>{{ allCases | pprint }}</pre>
+</div>

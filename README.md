@@ -4,18 +4,43 @@ TE (Text) - IM(Image) - MA (Math) reuse annotator
 ```
 Features.
 1. Annotates text, math, images.
-2. Documents extension: Currently = LaTex, (Internally: HTML, XML so ot can eventually take input in these formats)
+2. Input documents extension: Currently = LaTex, (Internally: HTML so it can eventually take input in these formats, but required internal configuarion).
 3. Future extension: Allow direct PDFs, highlighting already similar text (to help user in finding plagiarism)
 ```
 
 ## Installation Instructions
 
-1. `python3 -m venv mathPlagAnno` (More on creating [virtual environment](https://docs.python.org/3/library/venv.html))
-2. `source mathPlagAnno/bin/activate` ([activate](https://docs.python.org/3/tutorial/venv.html#:~:text=Once%20you%E2%80%99ve%20created%20a%20virtual%20environment%2C%20you%20may%20activate%20it.) virtual environment)
-3. `pip install -r requirements.txt` 
-4. `Setup PostgressDatabase` 
-5. `python manage.py runserver`
-6. Open: http://localhost:8000/hellow/ in any browser.
+### virtual environment
+`python3 -m venv mathReuseAnno` (More on creating [virtual environment](https://docs.python.org/3/library/venv.html))
+`source mathReuseAnno/bin/activate` ([activate](https://docs.python.org/3/tutorial/venv.html#:~:text=Once%20you%E2%80%99ve%20created%20a%20virtual%20environment%2C%20you%20may%20activate%20it.) virtual environment)
+
+### install dependencies
+`pip install -r requirements.txt` 
+
+### install LaTeXML
+`sudo apt-get install latexml` (Additional [installation instructions](https://math.nist.gov/~BMiller/LaTeXML/get.html) if needed or for differrent operating systems)
+
+### setup PostgreSQL database 
+`python manage.py migrate` (can also be used without a database but recommended to have a database). If you want to use the app without a database refer to Dcoker Installation Section.
+
+### start server
+`python manage.py runserver`
+
+### open following URL in a browser to start recording reuse cases
+`http://localhost:8000/mainUI/`
+
+
+## Dcoker
+
+### pull image
+`docker pull ankitsatpute/reuseanno:latest` (configuration with PostgreSQL)
+`docker pull ankitsatpute/reuseanno:wthtdb` (configuration without PostgreSQL)
+
+### build image from repo
+`docker build -t reuseanno .`
+
+### run web server
+`docker run --publish 8000:8000 reuseanno` (remember to put /mainUI/ after 8000 if using with PostgreSQL else only 8000 suffices for viewing main UI)
 
 
 ## Annotation Procedure
@@ -42,16 +67,18 @@ Features.
 
 1. `View all recorded cases`: All documented cases will be viewed in a JSON format.
 ```
-jsonDocinfo = {
+	jsonDocinfo = {
 	"suspDoc": {"suspDocName": None, "suspText": None,
-					"suspMath": None, "suspDocHTML": None,
+					"suspMath": None, "suspImages": None,
+					"suspDocHTML": None,
 					"suspDocHTMLParent": None
 					},
 	"srcDoc": {"srcDocName": None, "srcText": None,
-					"srcMath": None, "srcDocHTML": None,
+					"srcMath": None, "srcImages": None,
+					"srcDocHTML": None,
 					"srcDocHTMLParent": None
 					},
-	"casesPlag" : None,
+	"casesReuse" : None,
 	"colorHighlight": None	
 	}
 	recordings = {"suspDocstart": None, "suspDocend": None,
@@ -63,4 +90,6 @@ jsonDocinfo = {
 3. `Home`: clears the uploaded document and takes the user to the main UI.
 4. `About`: About the development of the tool.  
 
+## License
 
+MIT

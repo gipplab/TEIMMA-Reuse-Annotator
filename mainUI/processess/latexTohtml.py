@@ -2,6 +2,9 @@ import os
 import sys
 import jsonlines
 from bs4 import BeautifulSoup
+from ..models import PlainText
+from ..models import Math
+from ..models import HTMLFiles
 from django.conf import settings
 
 def laTextoHTML(filename, docType):
@@ -31,16 +34,18 @@ def laTextoHTML(filename, docType):
 	# 	"text" ,docType+"output_xml_tags.txt")
 	# print(cmdtoJarrun)
 	# os.system(cmdtoJarrun)
-	htmltoMathandTextFileWrite(docType);
+	htmltoMathandTextFileWrite(docType, filename);
 
 
-def htmltoMathandTextFileWrite(filename):
+def htmltoMathandTextFileWrite(filename, fileStringName):
 	"""
 	To get all the math equations in a file
 	"""
 	file = os.path.join(settings.MEDIA_ROOT, "mainMedia", filename)+".html"
-	#filename = filename+".html"
 	soupHTML = BeautifulSoup(open(file, encoding="utf8").read(),"html.parser")
+	#saving HTML data in PostgreSQL
+	HTMLFiles.objects.create(filename=fileStringName,
+		htmlfile=open(file, encoding="utf8").read())
 	listOfmathjsons = list()
 	#Creating list of dict (maID:content)
 	for indtag in soupHTML.find_all("math"):
@@ -52,6 +57,8 @@ def htmltoMathandTextFileWrite(filename):
 		filename+"Math.jsonl"), mode='w') as writer:
 		for item in listOfmathjsons:
 			writer.write(item)
+	Math.objects.create(filename=fileStringName,
+		math=listOfmathjsons)
 	#Replacing all math tags from main HTML with their IDS
 	for indtag in soupHTML.find_all("math"):
 		indtag.replaceWith("["+indtag["id"]+"]")
@@ -60,4 +67,7 @@ def htmltoMathandTextFileWrite(filename):
 	#changed saving with the matches
 	with open(textFilePath, "w", encoding="utf8") as textFile:
 		textTags = soupHTML.findAll(text=True)
+		#saving data of plaintext file to PostgreSQLDB
+		PlainText.objects.create(filename=fileStringName,
+			plaintext=u"".join(t for t in textTags))
 		textFile.write(u"".join(t for t in textTags))

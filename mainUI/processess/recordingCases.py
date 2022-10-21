@@ -3,6 +3,7 @@ import random
 import jsonlines
 from bs4 import BeautifulSoup
 from random import randrange
+from ..models import Annotations
 
 def saveLastTwoRecordsPerman(obfuscInfo):
 	"""
@@ -12,14 +13,16 @@ def saveLastTwoRecordsPerman(obfuscInfo):
 	i = 0
 	jsonDocinfo = {
 	"suspDoc": {"suspDocName": None, "suspText": None,
-					"suspMath": None, "suspDocHTML": None,
+					"suspMath": None, "suspImages": None,
+					"suspDocHTML": None,
 					"suspDocHTMLParent": None
 					},
 	"srcDoc": {"srcDocName": None, "srcText": None,
-					"srcMath": None, "srcDocHTML": None,
+					"srcMath": None, "srcImages": None,
+					"srcDocHTML": None,
 					"srcDocHTMLParent": None
 					},
-	"casesPlag" : None,
+	"casesReuse" : None,
 	"colorHighlight": None	
 	}
 	recordings = {"suspDocstart": None, "suspDocend": None,
@@ -50,18 +53,21 @@ def saveLastTwoRecordsPerman(obfuscInfo):
 						if obj["count"][0] == "1":
 							dictSusp = getdictCaseMisc("susp", obj)
 							jsonDocinfo["suspDoc"]["suspDocName"] = suspDocNametemp
-							jsonDocinfo["suspDoc"]["suspText"] = dictSusp["text"]   #obj["text"][0]
-							jsonDocinfo["suspDoc"]["suspMath"] = dictSusp["math"]
+							if "Text" in obfuscInfo:
+								jsonDocinfo["suspDoc"]["suspText"] = dictSusp["text"]   #obj["text"][0]
+								recordings["suspDocstart"] = dictSusp["suspStart"]
+								recordings["suspDocend"] = dictSusp["suspEnd"]
+							if "Math" in obfuscInfo:
+								jsonDocinfo["suspDoc"]["suspMath"] = dictSusp["math"]
+							jsonDocinfo["suspDoc"]["suspImages"] = dictSusp["img"]
 							jsonDocinfo["suspDoc"]["suspDocHTML"] = dictSusp["html"] #obj['htmlFraction'][0]
 							jsonDocinfo["suspDoc"]["suspDocHTMLParent"] = dictSusp["htmlParent"] #obj['parentHTMLfraction'][0]
 							jsonDocinfo["colorHighlight"] = dictSusp["color"] #obj['color'][0]
-							recordings["suspDocstart"] = dictSusp["suspStart"]
-							recordings["suspDocend"] = dictSusp["suspEnd"]
 							if "InputObfusc" in obfuscInfo.keys() and len(obfuscInfo["InputObfusc"])>0:
 								recordings["obfuscation"] = obfuscInfo["InputObfusc"] 
 							else:
 								recordings["obfuscation"] = obfuscInfo["obfuscType"]
-							jsonDocinfo["casesPlag"] = recordings
+							jsonDocinfo["casesReuse"] = recordings
 							caseTyp = list()
 							if "Text" in obfuscInfo:
 								caseTyp.append("Text")
@@ -73,14 +79,18 @@ def saveLastTwoRecordsPerman(obfuscInfo):
 						if obj["count"][0] == "2":
 							dictSrc = getdictCaseMisc("src", obj)
 							jsonDocinfo["srcDoc"]["srcDocName"] = suspDocNametemp
-							jsonDocinfo["srcDoc"]["srcText"] = dictSrc["text"]   #obj["text"][0]
-							jsonDocinfo["srcDoc"]["srcMath"] = dictSrc["math"]
+							if "Math" in obfuscInfo:
+								jsonDocinfo["srcDoc"]["srcMath"] = dictSrc["math"]
+							jsonDocinfo["srcDoc"]["srcImages"] = dictSrc["img"]
 							jsonDocinfo["srcDoc"]["srcDocHTML"] = dictSrc["html"] #obj['htmlFraction'][0]
 							jsonDocinfo["srcDoc"]["srcDocHTMLParent"] = dictSrc["htmlParent"] #obj['parentHTMLfraction'][0]
-							recordings["srcDocstart"] = dictSrc["srcStart"]
-							recordings["srcDocend"] = dictSrc["srcEnd"]
-							jsonDocinfo["casesPlag"] = recordings
+							if "Text" in obfuscInfo:
+								jsonDocinfo["srcDoc"]["srcText"] = dictSrc["text"]   #obj["text"][0]
+								recordings["srcDocstart"] = dictSrc["srcStart"]
+								recordings["srcDocend"] = dictSrc["srcEnd"]
+							jsonDocinfo["casesReuse"] = recordings
 				i += 1
+		Annotations.objects.create(annotation=jsonDocinfo)
 		writer.write(jsonDocinfo)
 
 
@@ -101,8 +111,12 @@ def getdictCaseMisc(docType, mainOPrcrd):
 		listOfmathIDs = list()
 		for indtag in subHTMLsoup.find_all("math"):
 			listOfmathIDs.append(indtag["id"])
-			indtag.replaceWith("["+indtag["id"]+"]")
+			indtag.replaceWith("["+indtag["id"]+"]")	
 		suspDict["math"] = listOfmathIDs
+		listOfimgIDS = list()
+		if "Figure" in suspDict["text"]:
+			listOfimgIDS.append("S1.F1")
+		suspDict["img"] = listOfimgIDS
 		texts = subHTMLsoup.findAll(text=True)
 		standardText = u"".join(t for t in texts)
 		standardText = standardText.replace("\n", ' ')
@@ -130,6 +144,10 @@ def getdictCaseMisc(docType, mainOPrcrd):
 			listOfmathIDs.append(indtag["id"])
 			indtag.replaceWith("["+indtag["id"]+"]")
 		srcDict["math"] = listOfmathIDs
+		listOfimgIDS = list()
+		if "Figure" in srcDict["text"]:
+			listOfimgIDS.append("S2.F1")
+		srcDict["img"] = listOfimgIDS
 		texts = subHTMLsoup.findAll(text=True)
 		standardText = u"".join(t for t in texts)
 		standardText = standardText.replace("\n", ' ')

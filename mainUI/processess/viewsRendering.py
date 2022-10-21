@@ -2,6 +2,7 @@ import os
 import json
 import jsonlines
 from django.conf import settings
+from ..models import Annotations
 from django.shortcuts import render
 from .latexTohtml import laTextoHTML
 from django.core.files.storage import FileSystemStorage
@@ -62,7 +63,9 @@ def renderViews(request, stringRecordings):
 	if request.POST.get('viewAll') == 'viewAll':
 		print("Viewing all records")
 		renderView = render(request, 'sample_text/view_all_recorded.html',
-			{'allCases':getAllrecordings()})
+		 	{'allCases':getAllrecordings()})
+		#renderView = render(request, 'sample_text/view_all_recorded.html',
+		#	{'allCases':Annotations.objects.all().values()})
 
 	if request.POST.get('clearAllRecording') == 'clearAllRecording':
 		delete_All_record()
