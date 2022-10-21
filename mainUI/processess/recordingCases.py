@@ -114,8 +114,9 @@ def getdictCaseMisc(docType, mainOPrcrd):
 			indtag.replaceWith("["+indtag["id"]+"]")	
 		suspDict["math"] = listOfmathIDs
 		listOfimgIDS = list()
-		if "Figure" in suspDict["text"]:
-			listOfimgIDS.append("S1.F1")
+		for indtag in subHTMLsoup.find_all("img"):
+			listOfimgIDS.append(indtag["id"])
+			indtag.replaceWith("["+indtag["id"]+"]")
 		suspDict["img"] = listOfimgIDS
 		texts = subHTMLsoup.findAll(text=True)
 		standardText = u"".join(t for t in texts)
@@ -145,8 +146,9 @@ def getdictCaseMisc(docType, mainOPrcrd):
 			indtag.replaceWith("["+indtag["id"]+"]")
 		srcDict["math"] = listOfmathIDs
 		listOfimgIDS = list()
-		if "Figure" in srcDict["text"]:
-			listOfimgIDS.append("S2.F1")
+		for indtag in subHTMLsoup.find_all("img"):
+			listOfimgIDS.append(indtag["id"])
+			indtag.replaceWith("["+indtag["id"]+"]")
 		srcDict["img"] = listOfimgIDS
 		texts = subHTMLsoup.findAll(text=True)
 		standardText = u"".join(t for t in texts)
