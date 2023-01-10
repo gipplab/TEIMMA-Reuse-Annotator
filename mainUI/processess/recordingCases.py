@@ -78,7 +78,7 @@ def saveLastTwoRecordsPerman(obfuscInfo):
 							recordings["recordingType"] = caseTyp
 						if obj["count"][0] == "2":
 							dictSrc = getdictCaseMisc("src", obj)
-							jsonDocinfo["srcDoc"]["srcDocName"] = suspDocNametemp
+							jsonDocinfo["srcDoc"]["srcDocName"] = srcDocNametemp
 							if "Math" in obfuscInfo:
 								jsonDocinfo["srcDoc"]["srcMath"] = dictSrc["math"]
 							jsonDocinfo["srcDoc"]["srcImages"] = dictSrc["img"]
