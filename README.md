@@ -2,7 +2,7 @@
 TE (Text) - IM(Image) - MA (Math) reuse annotator
 
 ```
-Features.
+Features:
 1. Annotates text, math, images.
 2. Input documents extension: Currently = LaTex, (Internally: HTML so it can eventually take input in these formats, but required internal configuarion).
 3. Future extension: Allow direct PDFs, highlighting already similar text (to help user in finding plagiarism)
