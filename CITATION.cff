@@ -1,0 +1,9 @@
+@inproceedings{Satpute2023,
+  title        = {TEIMMA: The First Content Reuse Annotator for Text, Images, and Math},
+  author       = {Satpute, Ankit and Greiner-Petter, Andre and Schubotz, Moritz and Meuschke, Norman and Aizawa, Akiko and Gipp, Bela},
+  year         = 2023,
+  month        = {June},
+  booktitle    = {2023 ACM/IEEE Joint Conference on Digital Libraries (JCDL)},
+  location     = {Santa Fe, New Mexico, USA},
+  topic        = {pd}
+}
