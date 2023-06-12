@@ -1,9 +1,26 @@
-@inproceedings{Satpute2023,
-  title        = {TEIMMA: The First Content Reuse Annotator for Text, Images, and Math},
-  author       = {Satpute, Ankit and Greiner-Petter, Andre and Schubotz, Moritz and Meuschke, Norman and Aizawa, Akiko and Gipp, Bela},
-  year         = 2023,
-  month        = {June},
-  booktitle    = {2023 ACM/IEEE Joint Conference on Digital Libraries (JCDL)},
-  location     = {Santa Fe, New Mexico, USA},
-  topic        = {pd}
-}
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Satpute"
+  given-names: "Ankit"
+  orcid: "https://orcid.org/0000-0003-3219-026X"
+- family-names: "Greiner-Petter"
+  given-names: "Andre"
+  orcid: "https://orcid.org/0000-0002-5828-5497"
+- family-names: "Schubotz"
+  given-names: "Moritz"
+  orcid: "https://orcid.org/0000-0001-7141-4997"
+- family-names: "Meuschke"
+  given-names: "Norman"
+  orcid: "https://orcid.org/0000-0003-4648-8198"
+- family-names: "Aizawa"
+  given-names: "Akiko"
+  orcid: "https://orcid.org/0000-0001-6544-5076"
+- family-names: "Gipp"
+  given-names: "Bela"
+  orcid: "https://orcid.org/0000-0001-6522-3019"
+title: "TEIMMA-Reuse-Annotator"
+version: 1.0.0
+date-released: 2023-01-21
+conference: "2023 ACM/IEEE Joint Conference on Digital Libraries (JCDL)"
+url: "https://github.com/gipplab/TEIMMA-Reuse-Annotator"
