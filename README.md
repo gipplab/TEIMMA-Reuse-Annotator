@@ -1,12 +1,15 @@
 # TEIMMA-Reuse-Annotator
-TE (Text) - IM(Image) - MA (Math) reuse annotator
+TEIMMA: The First Content Reuse Annotator for Text, Images, and Math
 
 ```
-Features:
-1. Annotates text, math, images.
-2. Input documents extension: Currently = LaTex, (Internally: HTML so it can eventually take input in these formats, but required internal configuarion).
-3. Future extension: Allow direct PDFs, highlighting already similar text (to help user in finding plagiarism)
+Features.
+1. Annotates text, math, and images.
+2. Visualization of existing similairity: Users can use any of the four algorithms to assist them in annotating the present similarity in a scientific document pair.
+3. Input documents extension: Currently = LaTex, PDF, Plain text (.txt) (Internally: HTML). It also provides converting PDF to LaTeX for accurate access to math.
+4. Annotations can be exported from the database (It uses: PostgreSQL)
+5. It remembers if an already annotated document pair is uploaded again for annotations. Hence, allowing multiple, multiple suspicious-source or source-suspicious recordings.
 ```
+
 
 ## Installation Instructions
 
@@ -80,11 +83,11 @@ Features:
 					},
 	"casesReuse" : None,
 	"colorHighlight": None	
-	}
 	recordings = {"suspDocstart": None, "suspDocend": None,
 					"srcDocstart": None, "srcDocend": None,
 					"obfuscation":None, "recordingType":None
 					}
+	}
 ```
 2. `Clear all recorded cases`: This will delete all recorded cases permanently; make sure you have taken a backup of previously recorded cases; otherwise, previously recorded cases will not be able to restore.
 3. `Home`: clears the uploaded document and takes the user to the main UI.
