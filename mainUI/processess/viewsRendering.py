@@ -10,7 +10,15 @@ from .recordingCases import saveLastTwoRecordsPerman
 
 def renderViews(request, stringRecordings):
 	doc_names = {}
-	renderView = render(request, 'base_layout.html')
+	if "sourceDoc.html" in os.listdir(os.path.join(settings.MEDIA_ROOT, "mainMedia")):
+		if "suspiciousDoc.html" in os.listdir(os.path.join(settings.MEDIA_ROOT, "mainMedia")):
+			renderView = render(request, 'sample_text/src_susp_doc_view.html', 
+				{'susp':"mainMedia/suspiciousDoc.html", 
+				'src':"mainMedia/sourceDoc.html", 
+				'startRecording':False, 'countRef':0,
+				'prevRecordings':stringRecordings})
+		else:
+			renderView = render(request, 'base_layout.html')
 	if request.POST.get('uploadFiles') == 'uploadFiles':
 		delete_All_record()
 		if 'suspiciousDoc' in request.FILES.keys():
@@ -43,6 +51,7 @@ def renderViews(request, stringRecordings):
 				'src':"mainMedia/sourceDoc.html",
 				'startRecording':True, 'countRef':0,
 				'prevRecordings':stringRecordings})
+	# This is for deleting last record 
 	if request.POST.get('newRecording') == 'newRecording':
 		delete_last_record()
 		renderView = render(request, 'sample_text/src_susp_doc_view.html', 
@@ -57,25 +66,23 @@ def renderViews(request, stringRecordings):
 		renderView = render(request, 'sample_text/src_susp_doc_view.html', 
 				{'susp':"mainMedia/suspiciousDoc.html", 
 				'src':"mainMedia/sourceDoc.html", 
-				'startRecording':True, 'countRef':2,
+				'startRecording':False, 'countRef':2,
 				'prevRecordings':stringRecordings})
 
 	if request.POST.get('viewAll') == 'viewAll':
 		print("Viewing all records")
 		renderView = render(request, 'sample_text/view_all_recorded.html',
 		 	{'allCases':getAllrecordings()})
-		#renderView = render(request, 'sample_text/view_all_recorded.html',
-		#	{'allCases':Annotations.objects.all().values()})
 
 	if request.POST.get('clearAllRecording') == 'clearAllRecording':
 		delete_All_record()
 		renderView = render(request, 'sample_text/src_susp_doc_view.html', 
 				{'susp':"mainMedia/suspiciousDoc.html", 
 				'src':"mainMedia/sourceDoc.html", 
-				'startRecording':True, 'countRef':0,
+				'startRecording':False, 'countRef':0,
 				'prevRecordings':[]})
-	return renderView
 
+	return renderView
 
 def getAllrecordings():
 	"""
@@ -86,8 +93,13 @@ def getAllrecordings():
 	with jsonlines.open('permanRecords.jsonl', mode='r') as reader:
 		for obj in reader:
 			#print(obj['SuspiciousDocName'])
-			listRecords.append(obj)
-	return json.dumps(listRecords,indent=4)
+			if "casesReuse" in obj.keys():
+				listRecords.append([obj["suspDoc"]['suspDocHTML'], obj["srcDoc"]['srcDocHTML'],
+				str(obj["casesReuse"]["recordingType"]), obj["casesReuse"]["obfuscation"]])
+			elif "casesPlag" in obj.keys():
+				listRecords.append([obj["suspDoc"]['suspDocHTML'], obj["srcDoc"]['srcDocHTML'],
+				str(obj["casesPlag"]["recordingType"]), obj["casesPlag"]["obfuscation"]])
+	return listRecords
 
 def saveResult(resultHere, intI):
 	"""
@@ -108,7 +120,7 @@ def saveResult(resultHere, intI):
 
 def delete_last_record():
 	"""
-	In case annotation is stopped in the middle, this fucntion will allow to
+	In case annotation is stopped in the middle, this function will allow to
 	clear falsely recorded annotation.
 	Currently: Delete last record option, you should be able to see that record 
 	that has been deleted has no background color. 
@@ -118,8 +130,14 @@ def delete_last_record():
 		for obj in readerOp:
 			newRcrds.append(obj)
 	with jsonlines.open('tempRecords.jsonl', mode='w') as writerOp:
-		for obji in newRcrds[:len(newRcrds)-1]:
-			writerOp.write(obji)
+		if len(newRcrds) != 1:
+			# checking if the record being removed is the last record which has file names.
+			for obji in newRcrds[:len(newRcrds)-1]:
+				writerOp.write(obji)
+		else:
+			# if its the last record then do not delet it, as it is required for annotation data
+			for obji in newRcrds[:len(newRcrds)]:
+				writerOp.write(obji)
 
 
 def geRecordings():

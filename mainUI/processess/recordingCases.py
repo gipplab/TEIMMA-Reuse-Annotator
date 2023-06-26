@@ -29,10 +29,10 @@ def saveLastTwoRecordsPerman(obfuscInfo):
 					"srcDocstart": None, "srcDocend": None,
 					"obfuscation":None, "recordingType":None
 					}
-	sizeOfreader = 0  #To keep track of how many records are there in tempRecords
-	sizeOfreaderAg = 0 #For assigning accurate record
-	lastElement = 0 #We save last and secpnd last ele permanently so 
-	secondlastElement = 0 #these two are to keep track of index
+	sizeOfreader = 0  # To keep track of how many records are there in tempRecords
+	sizeOfreaderAg = 0 # For assigning accurate record
+	lastElement = 0 	  # We save last and second last ele permanently so 
+	secondlastElement = 0 # these two are to keep track of index
 	with jsonlines.open('permanRecords.jsonl', mode='a') as writer:
 		with jsonlines.open('tempRecords.jsonl') as reader:
 			for ob1 in reader:
@@ -114,9 +114,8 @@ def getdictCaseMisc(docType, mainOPrcrd):
 			indtag.replaceWith("["+indtag["id"]+"]")	
 		suspDict["math"] = listOfmathIDs
 		listOfimgIDS = list()
-		for indtag in subHTMLsoup.find_all("img"):
-			listOfimgIDS.append(indtag["id"])
-			indtag.replaceWith("["+indtag["id"]+"]")
+		if "Figure" in suspDict["text"]:
+			listOfimgIDS.append("S1.F1")
 		suspDict["img"] = listOfimgIDS
 		texts = subHTMLsoup.findAll(text=True)
 		standardText = u"".join(t for t in texts)
@@ -146,9 +145,8 @@ def getdictCaseMisc(docType, mainOPrcrd):
 			indtag.replaceWith("["+indtag["id"]+"]")
 		srcDict["math"] = listOfmathIDs
 		listOfimgIDS = list()
-		for indtag in subHTMLsoup.find_all("img"):
-			listOfimgIDS.append(indtag["id"])
-			indtag.replaceWith("["+indtag["id"]+"]")
+		if "Figure" in srcDict["text"]:
+			listOfimgIDS.append("S2.F1")
 		srcDict["img"] = listOfimgIDS
 		texts = subHTMLsoup.findAll(text=True)
 		standardText = u"".join(t for t in texts)

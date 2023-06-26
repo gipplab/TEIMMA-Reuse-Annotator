@@ -6,11 +6,14 @@ from . import views
 # URLConf
 urlpatterns = [
 	path('mainUI/', views.say_hello),
+	path('feedbackAnno/', views.feednackanno),
 	path('sampledoc/', views.sample_document_2),
-	path('implJS/', views.sample_document),
+	path('download/', views.download_file, name='download_file'),
+	path('about/', views.sample_document),
 	path('api/getJson', views.getJson),
-	path('hellow/', views.viewPag),
 	path(r'hellow/getCharacterOffsets', views.getCharacterOffsets),
+	path('pair-detail/<str:file_name1>/<str:file_name2>/', views.pair_detail_view, name='pair_detail'),
+	path('save_pair/', views.save_pair, name='save_pair'),
 ]
 
 if settings.DEBUG:

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TEIMMA Annotator</title>
+  <meta charset="utf-8">
+  <style>
+    .header {
+      top: 0;
+      background-color: #f1f1f1;
+      padding: 1px;
+      text-align: center;
+      font-size: small;
+      margin-top: -10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="header">
+  <h1>TEIMMA: Feedback on annotations</h1>
+</div>
+
+    <div class="scrollable-list">
+        <ul>
+            {% for pair in file_pairs %}
+            <li><a href="{% url 'pair_detail' pair.fileName1 pair.fileName2 %}">{{ pair.fileName1 }} - {{ pair.fileName2 }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+
+
+<div class="footer" style="position: fixed;">
+</div>
+
+</body>
+</html>

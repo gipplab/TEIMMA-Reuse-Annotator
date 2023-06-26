@@ -18,6 +18,28 @@
 {% endblock %}
 
 
+{% block colorColumn %}
+
+
+{% if startRecording %}
+
+    <button type="submit" name="startRecording" value="startRecording" style="background-color: red;">Start Recording</button>
+    <h2 style="margin-bottom: -8px;"> </h2> 
+    <button type="submit" name="finishRecording" value="finishRecording">Finish Recording</button>
+    <h2 style="margin-bottom: -8px;"> </h2>
+
+{% else %}
+
+    <button type="submit" name="startRecording" value="startRecording">Start Recording</button>
+    <h2 style="margin-bottom: -8px;"> </h2> 
+    <button type="submit" name="finishRecording" value="finishRecording">Finish Recording</button>
+    <h2 style="margin-bottom: -8px;"> </h2>
+
+{% endif %}
+
+
+{% endblock %}
+
 {% block rightColumn %}
 
 {% if startRecording %}

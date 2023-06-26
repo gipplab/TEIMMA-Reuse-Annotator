@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>TEIMMA</title>
+  <title>TEIMMA Annotator</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
   <script type="text/javascript" src="{% static 'js/introJS.js' %}"></script>
 </head>
@@ -15,12 +15,13 @@
 <body>
 
 <div class="header">
-  <h1>TEIMMA Reuse Annotator</h1>
+  <h1>TEIMMA Annotator</h1>
 </div>
 
 <div class="topnav">
-  <a href="http://localhost:8000/mainUI/">Home</a> 
-  <a href="#">About</a>
+  <a href="http://localhost:8000/mainUI/">Home</a>
+  <a href="http://localhost:8000/about/">About</a>
+  <a href="http://localhost:8000/feedbackAnno/">Feedback on annotations</a>
 </div>
 
 {% block renderAll %}
@@ -30,7 +31,7 @@
   {% csrf_token %}
   <div class="column" id="leftColumn">
     <h2 class="h2margincol">
-      Suspicious document <br/>
+      Document under inspection <br/>
       <input class="h2Fileuploadleft" type="file" name="suspiciousDoc">
     </h2>
   </div>  
@@ -40,7 +41,7 @@
   </div>
   <div class="column" >
     <h2 class="h2margincol">
-      Source document <br/>
+      Potential source document <br/>
       <input class="h2Fileuploadright" type="file" name="sourceDoc">
       <button class="h2Fileuploadbutton" type="submit" name="uploadFiles" value="uploadFiles"> Upload Files</button>
     </h2>
@@ -71,35 +72,65 @@
   <div id="center">
     <form method="post" enctype="multipart/form-data">
       {% csrf_token %}
-      <hr size="8" color="black"> 
-      <h2> Recording </h2>
+
+      <hr style="margin-bottom: -18px;" size="4" color="black">
+      <h2 style="margin-bottom: -8px;"> Highlight similarity</h2>
+      <hr size="4" color="black"> 
+        <input type="checkbox" size="5" id="LCS">
+        <label for="LCS">LCS</label><br>
+        <label >Threshold: </label>
+        <input type="text" size="5" id="LCSthreashold" value=5 class="search" onkeydown="searcH('Enter')">   </input>
+        <h2 style="margin-bottom: -8px;"> </h2>    
+        <input type="checkbox" size="5" id="Adaptivesize">
+        <label for="Adaptivesize">AdaPlag</label><br>
+        <label >Threshold: </label>
+        <input type="text" size="5" id="Adaptivesizethre" value=5 class="search" onkeydown="searcH('Enter')"> </input>
+        <h2 style="margin-bottom: -8px;"> </h2>
+        <input type="checkbox" size="5" id="LCIS">
+        <label for="LCIS">LCIS</label><br>
+        <label >Threshold: </label>
+        <input type="text" size="5" id="LCISthre" value=3 class="search" onkeydown="searcH('Enter')"> </input>
+        <h2 style="margin-bottom: -8px;"> </h2> 
+        <input type="checkbox" size="5" id="GIT">
+        <label for="GIT">GIT</label><br>
+        <label >Threshold: </label>
+        <input type="text" size="5" id="GITthre" value=3 class="search" onkeydown="searcH('Enter')"> </input>
+        <h2 style="margin-bottom: -8px;"> </h2>
+
+      <hr style="margin-bottom: -18px;" size="4" color="black"> 
+      <h2 style="margin-bottom: -8px;" > Recording </h2>
       <hr size="4" color="black"> 
       <button type="submit" name="viewAll" value="viewAll">View all recorded cases</button>
-      <h2> </h2>
+      <h2 style="margin-bottom: -8px;"> </h2>
+
+      {% block colorColumn %}
+
       <button type="submit" name="startRecording" value="startRecording">Start Recording</button>
-      <h2> </h2> 
+      <h2 style="margin-bottom: -8px;"> </h2> 
       <button type="submit" name="finishRecording" value="finishRecording">Finish Recording</button>
-      <h2> </h2>
+      <h2 style="margin-bottom: -8px;"> </h2>
+
+      {% endblock %}
+
       <button type="submit" name="newRecording" value="newRecording">Delete last record</button>
-      <h2> </h2>
+      <h2 style="margin-bottom: -8px;"> </h2>
       <button type="submit" name="clearAllRecording" value="clearAllRecording">Clear all recorded cases</button>
-      <hr size="8" color="black"> 
+      <hr style="margin-bottom: -8px;" size="4" color="black"> 
 
-    <h2>  </h2>
+    <h2 style="margin-bottom: -22px;">  </h2>
 
-    <h2> Type of case</h2>
+    <h2 style="margin-bottom: -8px;">Content type</h2>
     <hr size="4" color="black"> 
       <input type="checkbox" value="Text" name="Text">
       <label for="Text">Text</label><br>
-    <h2>  </h2>
       <input type="checkbox" value="Math" name="Math">
       <label for="Math">Math</label><br>
-    <h2>  </h2>
       <input type="checkbox" value="Image" name="Image">
       <label for="Image">Image</label><br>
-    <hr size="8" color="black">
+    <hr style="margin-bottom: -18px;" size="4" color="black">
     
-    <h2> Obfuscation type</h2>
+    <h2 style="margin-bottom: -10px;"> Obfuscation</h2>
+    <hr size="4" color="black"> 
 
       <select name="obfuscType" onchange="selectChange(this.value)" ;>
         <option value="No">No obfuscation</option>
@@ -112,9 +143,9 @@
       enter custom type
       <input type="text" name="InputObfusc"> </input>
       </form>
-    <h2>  </h2>
+    <h2 style="margin-bottom: -10px;">  </h2>
 
-    <hr size="8" color="black">
+    <hr size="4" color="black">
 
     </div>
 
@@ -128,13 +159,6 @@
 {% endblock %}
 
 <div class="footer" style="position: fixed;">
-<p>Developed on Earth by: 
-  <a target="_blank" href="https://gipplab.org/team/ankit-satpute/">Ankit Satpute</a>
-  <a target="_blank" href="https://gipplab.org/team/dr-andre-greiner-petter/">André Greiner-Petter</a>
-  <a target="_blank" href="https://gipplab.org/team/dr-moritz-schubotz/">Moritz Schubotz</a>
-  <a target="_blank" href="https://www.nii.ac.jp/en/faculty/digital_content/aizawa_akiko/">Akiko Aizawa</a>
-  <a target="_blank" href="https://gipplab.org/team/prof-dr-bela-gipp/">Bela Gipp</a>
-</p>
 </div>
 
 </body>

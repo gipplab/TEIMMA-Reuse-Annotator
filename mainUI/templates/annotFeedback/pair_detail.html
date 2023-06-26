@@ -1,17 +1,10 @@
-{% load static %}
+<!-- pair_detail.html -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>TEIMMA Reuse Annotator</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
-  <script type="text/javascript" src="{% static 'js/introJS.js' %}"></script>
-
-      <style>
+    <title>Pair Detail</title>
+    <style>
         body {
             overflow-x: hidden; /* Hide horizontal scroll */
         }
@@ -44,34 +37,40 @@
             border-top: 1px solid #000;
             margin: 20px 0;
         }
+        .comment-box {
+            width: 100%;
+            resize: vertical;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .comment-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+        .feedback-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .feedback-option label {
+            margin-bottom: 5px;
+        }
     </style>
-
-
 </head>
-
 <body>
-
-<div class="header">
-  <h1>TEIMMA Annotator</h1>
-</div>
-
-<div class="topnav">
-  <a href="http://localhost:8000/mainUI/">Home</a>
-  <a href="http://localhost:8000/about/">About</a>
-  <a href="{% url 'download_file' %}" download>Download annotations</a>
-</div>
-
-    {% for pair in allCases %}
+    <h1>Feedback on recorded annotations</h1>
+    {% for pair in selected_pairs %}
     <div class="pair-container">
         <div class="html-case">{{ pair.0|safe }}</div>
         <div class="center">
             <p><strong>Case Type:</strong> {{ pair.2 }}</p>
             <p><strong>Case Obfuscation:</strong> {{ pair.3 }}</p>
+            <p><strong>Case ID:</strong> {{ pair.4 }}</p>
         </div>
         <div class="html-case">{{ pair.1|safe }}</div>
     </div>
     <div class="separator"></div> <!-- Add a separator to visually separate the pairs -->
     {% endfor %}
-
 </body>
 </html>

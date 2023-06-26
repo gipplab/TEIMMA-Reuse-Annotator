@@ -1,0 +1,68 @@
+{% load static %}
+<style>
+    .indent {
+        margin-left: 20px;
+    }
+    .scroll-container {
+        height: 400px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TEIMMA Annotator</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+
+<div class="header">
+  <h1>TEIMMA Annotator</h1>
+</div>
+
+<div class="topnav">
+  <a href="http://localhost:8000/mainUI/">Home</a>
+  <a href="http://localhost:8000/about/">About</a>
+</div>
+
+
+<h2>TEIMMA reuse annotator</h2>
+
+<p>
+Annotation Procedure
+
+<p>1. Choose a document under inspection (left side upload) and potential source document (right side upload) file with file extension in LateX or PDF or .txt.</p>
+<p class="indent">a. File(s) with any other extension will throw an error.</p> 
+<p class="indent">b. Also, make sure you choose both files in the correct columns; otherwise, this will record the wrong document name as inspected and potential source.</p>
+<p>2. After choosing both files from a local directory, click on the upload button.</p>
+<p class="indent">a. This might take a while as latex conversion to HTML5 is in the process using <a href="https://math.nist.gov/~BMiller/LaTeXML/">LaTeXML</a>.</p>
+<p class="indent">b. You can observe the progress on the terminal.</p>
+<p class="indent">c. Upon successful conversion, both documents will be shown on the main UI page. You can verify if the content is converted correctly and if the document under inspection and potential source document are correct.</p>
+<p class="indent">d. The generated HTML5 files will be cached till the next upload overwrites. If you want to upload the same files again, the UI uses saved HTML files from the database.</p>
+<p class="indent">e. You can scroll into the individual documents to see further content</p>
+<p>3. To start recording a similarity content case, click on the <code>Start Recording</code> button and select a part of the document under inspection and then the potential source document (any document could be chosen first).</p>
+<p class="indent">a. You will see that both the selected texts will be highlighted with the same background color.</p>
+<p class="indent">b. If the color is not assigned, please redo the selection by clicking on <code>Start Recording</code> again.</p>
+<p>4. Select an option from <code>Content type.</code></p>
+<p class="indent">a. If no option selected, then <code>Text</code> will be selected as the default option.</p>
+<p class="indent">b. You can choose more than one box to indicate that you annotate with multi-content type.</p>
+<p>5. Select the appropriate <code>Obfuscation</code> from the drop-down menu. If you think that the obfuscation present in the text does not match the available choice, then enter an appropriate option of yours in the block <code>Enter custom name</code>.</p>
+<p>6. Finally, click on <code>Finish Recording</code> to save the recorded case. After this, the page will refresh, and your saved case will be shown with the same assigned background color.</p>
+<p>7. To highlight the existing similarity, you can choose any of the algorithms from the available algorithms in the UI option <code>Highlight similarity</code></p>
+<p class="indent">a. You can also enter the algorithm's parameters in the provided input. For example, in the case of <code>Threshold for LCS</code>, you can enter the minimum number of word tokens you want to view.</p>
+
+<p>  .</p>
+
+<p> .</p>
+<p> .</p>
+
+<div class="footer" style="position: fixed;">
+</div>
+
+</body>
+</html>
