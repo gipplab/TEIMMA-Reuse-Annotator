@@ -71,20 +71,21 @@ Features.
 1. `View all recorded cases`: All documented cases will be viewed in a JSON format.
 ```
 	jsonDocinfo = {
-	"suspDoc": {"suspDocName": None, "suspText": None,
-					"suspMath": None, "suspImages": None,
-					"suspDocHTML": None,
-					"suspDocHTMLParent": None
+	"inspecDoc": {"inspecDocName": None, "inspecText": None,
+					"inspecMath": None, "inspecImages": None,
+					"inspecDocHTML": None,
+					"inspecDocHTMLParent": None
 					},
-	"srcDoc": {"srcDocName": None, "srcText": None,
-					"srcMath": None, "srcImages": None,
-					"srcDocHTML": None,
-					"srcDocHTMLParent": None
+	"potsrcDoc": {"potsrcDocName": None, "potsrcText": None,
+					"potsrcMath": None, "potsrcImages": None,
+					"potsrcDocHTML": None,
+					"potsrcDocHTMLParent": None
 					},
-	"casesReuse" : None,
+	"contentType" : None,
 	"colorHighlight": None	
-	recordings = {"suspDocstart": None, "suspDocend": None,
-					"srcDocstart": None, "srcDocend": None,
+	}
+	recordings = {"inspecDocstart": None, "inspecDocend": None,
+					"potsrcDocstart": None, "potsrcDocend": None,
 					"obfuscation":None, "recordingType":None
 					}
 	}
@@ -92,6 +93,7 @@ Features.
 2. `Clear all recorded cases`: This will delete all recorded cases permanently; make sure you have taken a backup of previously recorded cases; otherwise, previously recorded cases will not be able to restore.
 3. `Home`: clears the uploaded document and takes the user to the main UI.
 4. `About`: About the development of the tool.  
+5. `Delete last record`: Deletes the last selected case from the cached annotations and the database.
 
 ## License
 
